@@ -3,14 +3,17 @@ JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
 Forsström Mikko [AI3360]
 Ratkaisut: https://js-programming-jamk.pekkis.eu/
 
-Harjoitustehtäväpisteet: 20
-Kaikki tarjolla olleet harjoitustehtäväpisteet: 20
-20/20 => 100,0 %
+Harjoitustehtäväpisteet: 24
+Kaikki tarjolla olleet harjoitustehtäväpisteet: 24
+24/24 => 100,0 %
 
 Ratkaisut on toteutettu erillisinä HTML-tiedostoina, jotka sisältävät
-tehtävänannon kommenttina ja ratkaisun script-lohkossa. Tulostukset menevät
-selaimen web-konsoliin tehtävänantojen mukaisesti, joten sivu itsessään on
-tyhjä - avaa konsoli (F12) nähdäksesi tuloksen.
+tehtävänannon kommenttina ja ratkaisun script-lohkossa.
+
+Luvun 1 tehtävissä tulostukset menevät selaimen web-konsoliin
+tehtävänantojen mukaisesti, joten sivu itsessään on tyhjä - avaa konsoli
+(F12) nähdäksesi tuloksen. Luvun 2 tehtävissä on varsinainen
+käyttöliittymä, joka toimii sivulla sellaisenaan.
 
 Tiedostojen nimeäminen: <harjoitus>/<tehtävä>.html, esim. 01/07.html = H1T7.
 Jokaisella harjoituksella on oma hakemistosivunsa, esim. .../01/
@@ -26,8 +29,9 @@ virhettä: karkausvuositehtävässä täysien vuosisatojen tarkistus oli
 vertailufunktiota (oletuslajittelu vertaa lukuja merkkijonoina) ja
 nimitehtävässä muuttujan uudelleennimeäminen jätti yhteen kohtaan
 viittauksen window.name-globaaliin. Osa yksittäisistä korjausriveistä
-on tekoälyn ehdottamia. Kokonaisia tehtäväratkaisuja ei ole generoitu
-tekoälyllä.
+on tekoälyn ehdottamia. Luvussa 2 keskustelin tekoälyn kanssa myös siitä,
+miten tuloste rakennetaan turvallisesti DOM-metodeilla innerHTML:n sijaan.
+Kokonaisia tehtäväratkaisuja ei ole generoitu tekoälyllä.
 
 Lisäksi sivuston hakemistosivut (index.html), tyylitiedosto (style.css)
 ja tämän kirjanpidon pohja on laadittu tekoälyn avulla. Ne eivät ole
@@ -78,3 +82,47 @@ H1T9: 2/2p  Nimien kysely prompt()-funktiolla kunnes syöte on tyhjä. Nimet
 H1T10: 2/2p Mäkihypyn tyylipisteet viideltä tuomarilta prompt()-funktiolla.
             Summasta vähennetään pienin ja suurin pistemäärä.
             https://js-programming-jamk.pekkis.eu/01/10.html
+
+---
+
+JavaScript-perusteet 2
+Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/02/
+
+Tämän luvun tehtävät käyttävät yhteistä functions.js-moduulia, jossa on
+elm()-apufunktio DOM-elementtien rakentamiseen.
+
+H2T1: 2/2p  Lomake, johon syötetään nimi ja syntymävuosi. Show-painike
+            tulostaa tehtävänannon mukaisen tekstin sivulle.
+
+            Kaksi tietoista poikkeamaa tehtävänannon kuvasta:
+            - Kentän label on "Year of birth" eikä kuvan "Age:", koska
+              kenttään syötetään syntymävuosi - niin kuin tehtävänannon
+              tekstissäkin sanotaan - eikä ikää.
+            - Labelit on tyylitelty omille riveilleen (display: block),
+              joten kuvan kaksoispisteitä ei ole. Kaksoispiste on erotin
+              inline-asettelussa, jossa label ja kenttä ovat samalla
+              rivillä; omalla rivillään se jäisi roikkumaan tyhjän tilan
+              päälle.
+
+            Nykyinen vuosi haetaan Temporal-rajapinnalla
+            (Temporal.Now.zonedDateTimeISO().year) eikä tehtävänannon
+            mainitsemalla Date.getFullYear()-funktiolla. Temporal on
+            Daten nykyaikainen korvaaja. Sivu vaatii siis selaimen, joka
+            tukee Temporalia; luvun hakemistosivu tarkistaa tuen
+            automaattisesti ja kertoo tuloksen.
+
+            Tuloste rakennetaan DOM-metodeilla (createElement + append)
+            eikä innerHTML:llä, jolloin käyttäjän syöttämä nimi ei voi
+            päätyä suoritettavaksi HTML:ksi.
+            https://js-programming-jamk.pekkis.eu/02/01.html
+
+H2T2: 2/2p  Kahden luvun yhteenlaskin. laskeSumma(a, b) ottaa vastaan
+            lomakkeen kenttien merkkijonot ja palauttaa summan
+            kokonaislukuna (parseInt), tulostaSumma(a, b) tulostaa
+            tuloksen results-diviin. Muunnos merkkijonosta luvuksi
+            tehdään laskeSumma():ssa, koska tehtävänannon mukaan
+            tulostaSumma() saa parametreinaan nimenomaan merkkijonot.
+
+            Labeleista puuttuvat kuvan kaksoispisteet samasta syystä
+            kuin tehtävässä H2T1.
+            https://js-programming-jamk.pekkis.eu/02/02.html
