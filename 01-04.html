@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 1:4</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+
+Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
+Tee funktio, jolle voidaan välittää parametrina kolme lukua.
+Funktion tulee tulostaa selaimen web-konsoliin luvuista suurin.
+Käytä funktiotasi seuraavasti:
+
+// define your function
+   // Display all the numbers
+   // Find and display the biggest number
+
+// define three variables with any numbers
+// call your function
+
+*/
+        function findLargest(a, b, c) {
+            const unsorted = [a, b, c];
+            console.log('All the numbers', unsorted);
+            const largest = Math.max(a, b, c);
+            console.log('Largest number', largest);
+        }
+
+        const n1 = 500;
+        const n2 = 1000;
+        const n3 = 100000;
+
+        findLargest(n1, n2, n3);
+
+    </script>
+</body>
+
+</html>

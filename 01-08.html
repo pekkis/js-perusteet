@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 1:8</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
+Luo funktio joka ottaa parametrina merkkijonon ja joka tarkistaa,
+onko annettu merkkijono palindromi (palauttaa true)
+ja jos ei (palauttaa false). Voit olettaa, että merkkijono voi sisältää
+vain kirjaimia ja välilyöntejä.
+
+Tee pääohjelma, joka välittää tarkistettavan merkkijono funktiollesi ja tulostaa
+tarkistuksen tuloksen web-konsolille.
+
+Tässä muutamia esimerkkejä
+
+Race car -> yes
+Was it a car or a cat I saw -> yes
+How about this one -> no
+        */
+        function isPalindrome(sentence) {
+            const spacesRemoved = sentence.toLowerCase().replaceAll(' ', '');
+            const reversed = spacesRemoved.split('').reverse().join('');
+
+            return spacesRemoved === reversed;
+        }
+
+        const sentences = [
+            'Race car',
+            'Was it a car or a cat I saw',
+            'How about this one',
+            'Rasisti natsi aatu uhitteli tsekit saksalla allaskastike stiletti huutaa Istan IT sisar'
+        ];
+
+        for (const s of sentences) {
+            console.log(s, '->', isPalindrome(s) ? 'yes' : 'no');
+        }
+    </script>
+</body>
+
+</html>

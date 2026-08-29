@@ -1,0 +1,61 @@
+JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
+29.08.2026
+Forsström Mikko [AI3360]
+Ratkaisut: https://js-programming-jamk.pekkis.eu/
+
+Harjoitustehtäväpisteet: 20
+Kaikki tarjolla olleet harjoitustehtäväpisteet: 20
+20/20 => 100,0 %
+
+Ratkaisut on toteutettu erillisinä HTML-tiedostoina, jotka sisältävät
+tehtävänannon kommenttina ja ratkaisun script-lohkossa. Tulostukset menevät
+selaimen web-konsoliin tehtävänantojen mukaisesti, joten sivu itsessään on
+tyhjä - avaa konsoli (F12) nähdäksesi tuloksen.
+
+Tiedostojen nimeäminen: <harjoitus>-<tehtävä>.html, esim. 01-07.html = H1T7.
+
+---
+
+Harjoitus 1: JavaScriptin perusteet
+Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/
+
+H1T1: 2/2p  Muuttujat ja lauseen muodostaminen template literalilla.
+            https://js-programming-jamk.pekkis.eu/01-01.html
+
+H1T2: 2/2p  Kahden henkilön ikäeron laskeminen ja tulostus annetussa muodossa.
+            Huom: tehtävänannon esimerkkitulosteessa nimi on "Kirsi Kernel",
+            datassa "Kirsi Kernell" - käytin datan mukaista kirjoitusasua.
+            https://js-programming-jamk.pekkis.eu/01-02.html
+
+H1T3: 2/2p  Lause taulukon sanoista toistolauseella (for) rakentaen.
+            https://js-programming-jamk.pekkis.eu/01-03.html
+
+H1T4: 2/2p  Funktio, joka ottaa kolme lukua, tulostaa ne ja suurimman niistä.
+            https://js-programming-jamk.pekkis.eu/01-04.html
+
+H1T5: 2/2p  Funktio, joka erottelee taulukosta parilliset ja parittomat luvut.
+            Testidatassa mukana nolla ja negatiivisia lukuja.
+            https://js-programming-jamk.pekkis.eu/01-05.html
+
+H1T6: 2/2p  Funktio, joka laskee taulukosta pienimmän, suurimman, summan ja
+            keskiarvon.
+            https://js-programming-jamk.pekkis.eu/01-06.html
+
+H1T7: 2/2p  Karkausvuoden tarkistus (jaollisuus 4:llä, poikkeuksena täydet
+            vuosisadat, poikkeuksen poikkeuksena 400:lla jaolliset).
+            Testattu tehtävänannon esimerkkivuosilla 1991, 1992, 1900 ja 2000.
+            https://js-programming-jamk.pekkis.eu/01-07.html
+
+H1T8: 2/2p  Palindromitarkistus. Välilyönnit poistetaan ja vertailu tehdään
+            pienaakkosin.
+            https://js-programming-jamk.pekkis.eu/01-08.html
+
+H1T9: 2/2p  Nimien kysely prompt()-funktiolla kunnes syöte on tyhjä. Nimet
+            tulostetaan sekä syöttöjärjestyksessä että aakkosjärjestyksessä.
+            Aakkostus tehdään suomalaisella lajittelujärjestyksellä
+            (localeCompare 'fi'), jolloin ä ja ö tulevat oikeaan paikkaan.
+            https://js-programming-jamk.pekkis.eu/01-09.html
+
+H1T10: 2/2p Mäkihypyn tyylipisteet viideltä tuomarilta prompt()-funktiolla.
+            Summasta vähennetään pienin ja suurin pistemäärä.
+            https://js-programming-jamk.pekkis.eu/01-10.html

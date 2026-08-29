@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 1:7</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        Luo HTML-tiedosto, joka sisältää JavaScript-koodin. Luo funktio, jolle voidaan välittää parametrina vuosiluku.
+        Funktion tulee palauttaa true-arvo, jos vuosi on karkausvuosi ja false-arvo, jos vuosi ei ole karkausvuosi.
+        Syötteen oikeamuotoisuutta ei tarvitse tarkistaa.
+        
+        Tee pääohjelma, joka välittää tarkistettavan luvun funktiollesi ja
+        tulostaa tarkistuksen tuloksen web-konsolille.
+        
+        Algoritmi: 4:llä jaolliset on, paitsi täydet vuosisadat.
+        Kuitenkin 400:lla jaolliset vuosisadat ovat.
+        
+        Esimerkki tulostuksesta:
+        
+        1991 -> ei ole karkausvuosi
+        1992 -> on karkausvuosi
+        1900 -> ei ole karkausvuosi
+        2000 -> on karkausvuosi
+        */
+
+        function isLeapYear(year) {
+            return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+        }
+
+        const years = [1900, 1991, 1992, 1000, 4000, 2000, 3000, 5000, 6000, 1999, 1978, 2001, 2004, 2008];
+
+        for (const y of years) {
+            console.log(y, '->', isLeapYear(y) ? 'on karkausvuosi' : 'ei ole karkausvuosi');
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+Me aiomme hostata kaikki vastauksemme domskussa js-programming-jamk.pekkis.eu/
+
+...
+
+Harjoitustehtäväkirjanpidossa opiskelija pitää itse kirjaa tekemistään harjoitustehtävistä tekstimuodossa. Harjoitustehtävien yhteydessä ilmoitetaan, mitä kunkin tehtäväratkaisun palautukselta odotetaan. Yksittäisestä harjoitustehtävästä opiskelijan tulee itse arvioida pistein, kuinka suuren osan tehtävän vaatimuksista hän on suorittanut. Jos tehtävän keskeiset vaatimukset täyttyvät, se riittää täysiin pisteisiin. Opiskelija voi ytimekkäästi kommentoida arvioimaansa pisteytystä. Ohjelmien ulkoasu on esim. vapaa silloin, kun sille ei erikseen ole määrätty vaatimuksia.
+
+Pyydettäessä opiskelijan tulee pystyä kertomaan harjoituksissa käyttämiensä ratkaisujen keskeisestä teknisestä toimintalogiikasta. Harjoitusten ratkaisut tulee olla saatavilla viittattujen URLien välityksellä siihen asti, kunnes opintojakson suoritus on hyväksytty.
+
+Päivitä kirjanpitoa opintojakson edetessä. Käytä esim. alla olevaa mallipohjaa apuna ja muokkaa se omaan tilanteeseesi sopivaksi. Ratkaisut tulee olla helposti tarkistettavissa. Muodosta niille sopiva kokonaisuus. Hyvä idea on koota tietyn harjoitussarjan tehtävät sopivalla tavalla yhteen.
+
+Opiskelija vastaa itse siitä, että dokumentoinnista on tarvittavat varmuuskopiot saatavilla.
+
+---
+
+JavaScript-ohjelmointi: Harjoitustehtäväväkirjanpito
+08.12.2026
+Sukunimi Etunimi [AB1234]
+Ratkaisut: https://student.labranet.jamk.fi/~AB1234/VAIKEA-ARVATA-TATA-URLIA
+
+Harjoitustehtäväpisteet: 148
+Kaikki tarjolla olleet harjoitustehtäväpisteet: 168
+148/168 = > 88,1 %
+
+---
+
+H1T1: 2/2p
+H1T2: 2/3p pieni virhe pyöristyksessä
+...
+H4T1: 2/10p tein vain käyttöliittymälomakkeen

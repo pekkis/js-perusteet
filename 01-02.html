@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 1:2</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+Luo HTML-tiedosto, joka sisältää JavaScript-koodin. Määritä muuttujat, jotka sisältävät henkilöiden nimet ja iät.:
+
+Matti Mainio, 30
+Kirsi Kernell, 50
+Laske kumpi henkilö on toista kuinka paljon vanhempi. Tulosta vastaus verkkoselaimen web-konsoliin alla esitetyllä tavalla.
+
+Kirsi Kernel is 20 years older than Matti Mainio.
+        */
+
+        const a = {
+            name: 'Kirsi Kernell',
+            age: 50
+        };
+
+        const b = {
+            name: 'Matti Mainio',
+            age: 30
+        };
+
+        const [older, younger] = [a, b].sort((s1, s2) => {
+            return s2.age - s1.age;
+        });
+
+        if (older.age === younger.age) {
+            console.log(`${older.name} is just as old as ${younger.name}.`);
+        } else {
+            console.log(`${older.name} is ${older.age - younger.age} years older than ${younger.name}.`);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 1:5</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+
+Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
+Tee funktio, jolle voidaan välittää parametrina kokonaislukuja
+sisältävä taulukko.
+
+Funktion tulee tutkia mitkä luvuista ovat parillisia.
+Funktion tulee tulostaa määritelty alkuperäinen taulukko
+ja lisäksi vain parillisia lukuja sisältävä taulukko
+ja vain parittomia lukuja sisältävä taulukko web-konsolille.
+Käytä funktiotasi seuraavasti:
+
+// define your function
+   // display original array
+   // find even and odd numbers
+   // display array which has only even numbers
+   // display array which has only odd numbers
+
+// define array with sample of numbers
+// call your function
+*/
+        function oddOrEven(numbers) {
+            console.log('All the numbers', numbers);
+
+            const even = numbers.filter(n => {
+                return n % 2 === 0;
+            });
+
+            const odd = numbers.filter(n => {
+                return n % 2 !== 0;
+            });
+
+            console.log('Even numbers', even);
+            console.log('Odd numbers', odd);
+        }
+
+        const numbers = [0, -1500, -1507, 1, 2, 3, 4, 5, 1084, 1083, 2042, 1000, 1001];
+        oddOrEven(numbers);
+    </script>
+</body>
+
+</html>

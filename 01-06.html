@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tehtävä 1:6</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
+Tee funktio, jolle voidaan välittää parametrina kokonaislukuja
+sisältävä taulukko. Funktion tulee tutkia mikä luvuista on pienin ja mikä suurin.
+Laske myös lukujen summa ja keskiarvo.
+Tulosta pyydetyt arvot selaimen web-konsolille.
+Käytä funktiotasi seuraavasti:
+
+// define your function
+   // find lowest and biggest
+   // calculate sum and average
+   // display values
+
+// define array with sample of numbers
+// call your function
+
+        */
+        function numberStatistics(numbers) {
+            const min = Math.min(...numbers);
+            const max = Math.max(...numbers);
+
+            const sum = numbers.reduce((total, n) => {
+                return total + n;
+            }, 0);
+
+            const avg = sum / numbers.length;
+
+            console.log('Min', min);
+            console.log('Max', max);
+            console.log('Sum', sum);
+            console.log('Average', avg);
+        }
+
+        const numbers = [0, -1500, -1507, 1, 2, 3, 4, 5, 1084, 1083, 104948, 2042, 1000, 1001];
+        numberStatistics(numbers);
+    </script>
+</body>
+
+</html>
