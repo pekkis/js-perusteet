@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Tehtävä 1:3</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        /*
+      /*
 
         Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
         Määrittele sovellukseesi taulukko, jossa on seuraavat sanat:
@@ -18,19 +16,18 @@
         Tulosta web-konsolille muodostunut lause.
         */
 
-        const words = ["JavaScriptin", "opiskelu", "on", "ihanaa!"];
+      const words = ["JavaScriptin", "opiskelu", "on", "ihanaa!"];
 
-        let sentence = '';
+      let sentence = "";
 
-        for (let x = 0; x < words.length; x = x + 1) {
-            sentence = sentence + words[x];
-            if (x < words.length - 1) {
-                sentence = sentence + ' ';
-            }
+      for (let x = 0; x < words.length; x = x + 1) {
+        sentence = sentence + words[x];
+        if (x < words.length - 1) {
+          sentence = sentence + " ";
         }
+      }
 
-        console.log(sentence);
+      console.log(sentence);
     </script>
-</body>
-
+  </body>
 </html>

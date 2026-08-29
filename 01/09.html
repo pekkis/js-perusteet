@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Tehtävä 1:9</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        /*
+      /*
 
 Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
 Web-sivulla kysytään JavaScriptin prompt()-funktiota käyttäen nimiä,
@@ -18,24 +16,23 @@ kunnes annetaan tyhjä nimi (=painetaan vain ENTERiä)
 Sovelluksen on tulostettava nimet web-konsolille
 sekä siinä järjestyksessä kuin ne on annettu että aakkosjärjestyksessä.
         */
-        const names = [];
+      const names = [];
 
-        // lets not shadow name, it has hit me before.
-        let newName;
-        do {
-            newName = prompt('Give a new name');
-            if (newName) {
-                names.push(newName);
-            }
-        } while (newName);
+      // lets not shadow name, it has hit me before.
+      let newName;
+      do {
+        newName = prompt("Give a new name");
+        if (newName) {
+          names.push(newName);
+        }
+      } while (newName);
 
-        const sorted = [...names].sort((a, b) => {
-            return a.localeCompare(b, 'fi');
-        });
+      const sorted = [...names].sort((a, b) => {
+        return a.localeCompare(b, "fi");
+      });
 
-        console.log('Names in given order', names);
-        console.log('Alphabetically sorted names', sorted);
+      console.log("Names in given order", names);
+      console.log("Alphabetically sorted names", sorted);
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 2:1</title>
+
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+
+    <script type="module">
+      import { elm } from "./functions.js";
+
+      /*
+
+Toteuta HTMLää, CSSää ja JavaScriptiä käyttäen oheisen kuva (ex0201.png) mukainen sovellus, jossa käyttäjä antaa nimen ja syntymävuoden. Sovelluksesi näyttää alla olevan näytetekstin, kun Show-painiketta on klikattu.
+
+Nykyinen vuosi saadaan Date-luokan ja getFullYear()-funktion avulla.
+
+Lue lisää: Date.prototype.getFullYear() .
+*/
+
+      // Tämän luvun tehtävät käyttävät Temporal-APIa, eivät Date-rajapintaa.
+      if (typeof Temporal === "undefined") {
+        console.error("⚠️ Tämä selain ei tue Temporal-APIa - tehtävä ei toimi.");
+      }
+
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const name = formData.get("name");
+        const year = formData.get("year_of_birth");
+        const currentYear = Temporal.Now.zonedDateTimeISO().year;
+        const age = currentYear - year;
+
+        const p = elm("p")(
+          "It has been a pleasure working with you ",
+          elm("strong")(name),
+          " all these years. Nice to see you are only ",
+          elm("strong")(age),
+          " years old. So we still have several years to work together.",
+        );
+
+        const heading = elm("h2")("Hi ", name, "!");
+        document.getElementById("result").replaceChildren(heading, p);
+      });
+    </script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Information</h1>
+
+      <form id="form" action="#">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="field">
+          <label for="year_of_birth">Year of birth</label>
+          <input id="year_of_birth" name="year_of_birth" type="number" required />
+        </div>
+
+        <div class="field">
+          <button type="submit">Show</button>
+        </div>
+
+        <div id="result"></div>
+      </form>
+    </main>
+  </body>
+</html>

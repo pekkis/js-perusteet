@@ -1,0 +1,14 @@
+packages:
+  - "."
+
+# --- Toimitusketjun turvallisuus ---
+
+# Älä asenna versiota, joka on julkaistu alle 2 vuorokautta sitten.
+# Suurin osa kaapatuista npm-paketeista huomataan ja vedetään pois
+# ensimmäisten tuntien aikana, joten pienikin varoaika on tehokas suoja.
+minimumReleaseAge: 2880
+
+# Yksikään riippuvuus ei saa ajaa asennusaikaisia skriptejä (postinstall yms.).
+# Tyhjä kartta = ei yhtään sallittua buildia.
+# Jos jokin paketti oikeasti tarvitsee buildin, lisätään tähän: paketti: true
+allowBuilds: {}

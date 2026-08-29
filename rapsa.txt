@@ -35,7 +35,7 @@ osa tehtäväratkaisuja.
 
 ---
 
-Harjoitus 1: JavaScriptin perusteet
+JavaScript-perusteet 1
 Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/01/
 
 H1T1: 2/2p  Muuttujat ja lauseen muodostaminen template literalilla.

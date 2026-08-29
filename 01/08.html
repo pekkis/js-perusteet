@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Tehtävä 1:8</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        /*
+      /*
 Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
 Luo funktio joka ottaa parametrina merkkijonon ja joka tarkistaa,
 onko annettu merkkijono palindromi (palauttaa true)
@@ -25,24 +23,23 @@ Race car -> yes
 Was it a car or a cat I saw -> yes
 How about this one -> no
         */
-        function isPalindrome(sentence) {
-            const spacesRemoved = sentence.toLowerCase().replaceAll(' ', '');
-            const reversed = spacesRemoved.split('').reverse().join('');
+      function isPalindrome(sentence) {
+        const spacesRemoved = sentence.toLowerCase().replaceAll(" ", "");
+        const reversed = spacesRemoved.split("").reverse().join("");
 
-            return spacesRemoved === reversed;
-        }
+        return spacesRemoved === reversed;
+      }
 
-        const sentences = [
-            'Race car',
-            'Was it a car or a cat I saw',
-            'How about this one',
-            'Rasisti natsi aatu uhitteli tsekit saksalla allaskastike stiletti huutaa Istan IT sisar'
-        ];
+      const sentences = [
+        "Race car",
+        "Was it a car or a cat I saw",
+        "How about this one",
+        "Rasisti natsi aatu uhitteli tsekit saksalla allaskastike stiletti huutaa Istan IT sisar",
+      ];
 
-        for (const s of sentences) {
-            console.log(s, '->', isPalindrome(s) ? 'yes' : 'no');
-        }
+      for (const s of sentences) {
+        console.log(s, "->", isPalindrome(s) ? "yes" : "no");
+      }
     </script>
-</body>
-
+  </body>
 </html>

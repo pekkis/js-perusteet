@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Tehtävä 1:10</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        /*
+      /*
 
 Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
 
@@ -21,23 +19,22 @@ ja suurimmat tyylipisteet.
 
 Käytä JavaScriptin prompt()-funktiota tyylipisteiden kysymiseen.
 */
-        const points = [];
-        for (let x = 1; x <= 5; x = x + 1) {
-            const pointsFromJudge = prompt(`Tuomarin #${x} pisteet`);
-            points.push(parseInt(pointsFromJudge, 10));
-        }
+      const points = [];
+      for (let x = 1; x <= 5; x = x + 1) {
+        const pointsFromJudge = prompt(`Tuomarin #${x} pisteet`);
+        points.push(parseInt(pointsFromJudge, 10));
+      }
 
-        const sortedPoints = [...points].sort((a, b) => a - b);
+      const sortedPoints = [...points].sort((a, b) => a - b);
 
-        sortedPoints.pop();
-        sortedPoints.shift();
+      sortedPoints.pop();
+      sortedPoints.shift();
 
-        const sum = sortedPoints.reduce((total, value) => {
-            return total + value;
-        }, 0);
+      const sum = sortedPoints.reduce((total, value) => {
+        return total + value;
+      }, 0);
 
-        console.log('Hyppääjän tyylipisteet', sum);
+      console.log("Hyppääjän tyylipisteet", sum);
     </script>
-</body>
-
+  </body>
 </html>

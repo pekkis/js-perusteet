@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Tehtävä 1:4</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        /*
+      /*
 
 Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
 Tee funktio, jolle voidaan välittää parametrina kolme lukua.
@@ -24,20 +22,18 @@ Käytä funktiotasi seuraavasti:
 // call your function
 
 */
-        function findLargest(a, b, c) {
-            const unsorted = [a, b, c];
-            console.log('All the numbers', unsorted);
-            const largest = Math.max(a, b, c);
-            console.log('Largest number', largest);
-        }
+      function findLargest(a, b, c) {
+        const unsorted = [a, b, c];
+        console.log("All the numbers", unsorted);
+        const largest = Math.max(a, b, c);
+        console.log("Largest number", largest);
+      }
 
-        const n1 = 500;
-        const n2 = 1000;
-        const n3 = 100000;
+      const n1 = 500;
+      const n2 = 1000;
+      const n3 = 100000;
 
-        findLargest(n1, n2, n3);
-
+      findLargest(n1, n2, n3);
     </script>
-</body>
-
+  </body>
 </html>

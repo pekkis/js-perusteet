@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Tehtävä 1:7</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        /*
+      /*
         Luo HTML-tiedosto, joka sisältää JavaScript-koodin. Luo funktio, jolle voidaan välittää parametrina vuosiluku.
         Funktion tulee palauttaa true-arvo, jos vuosi on karkausvuosi ja false-arvo, jos vuosi ei ole karkausvuosi.
         Syötteen oikeamuotoisuutta ei tarvitse tarkistaa.
@@ -28,17 +26,17 @@
         2000 -> on karkausvuosi
         */
 
-        function isLeapYear(year) {
-            return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
-        }
+      function isLeapYear(year) {
+        return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+      }
 
-        const years = [1900, 1991, 1992, 1000, 4000, 2000, 3000, 5000, 6000, 1999, 1978, 2001, 2004, 2008];
+      const years = [
+        1900, 1991, 1992, 1000, 4000, 2000, 3000, 5000, 6000, 1999, 1978, 2001, 2004, 2008,
+      ];
 
-        for (const y of years) {
-            console.log(y, '->', isLeapYear(y) ? 'on karkausvuosi' : 'ei ole karkausvuosi');
-        }
-
+      for (const y of years) {
+        console.log(y, "->", isLeapYear(y) ? "on karkausvuosi" : "ei ole karkausvuosi");
+      }
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Tehtävä 1:6</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        /*
+      /*
 Luo HTML-tiedosto, joka sisältää JavaScript-koodin.
 Tee funktio, jolle voidaan välittää parametrina kokonaislukuja
 sisältävä taulukko. Funktion tulee tutkia mikä luvuista on pienin ja mikä suurin.
@@ -26,25 +24,24 @@ Käytä funktiotasi seuraavasti:
 // call your function
 
         */
-        function numberStatistics(numbers) {
-            const min = Math.min(...numbers);
-            const max = Math.max(...numbers);
+      function numberStatistics(numbers) {
+        const min = Math.min(...numbers);
+        const max = Math.max(...numbers);
 
-            const sum = numbers.reduce((total, n) => {
-                return total + n;
-            }, 0);
+        const sum = numbers.reduce((total, n) => {
+          return total + n;
+        }, 0);
 
-            const avg = sum / numbers.length;
+        const avg = sum / numbers.length;
 
-            console.log('Min', min);
-            console.log('Max', max);
-            console.log('Sum', sum);
-            console.log('Average', avg);
-        }
+        console.log("Min", min);
+        console.log("Max", max);
+        console.log("Sum", sum);
+        console.log("Average", avg);
+      }
 
-        const numbers = [0, -1500, -1507, 1, 2, 3, 4, 5, 1084, 1083, 104948, 2042, 1000, 1001];
-        numberStatistics(numbers);
+      const numbers = [0, -1500, -1507, 1, 2, 3, 4, 5, 1084, 1083, 104948, 2042, 1000, 1001];
+      numberStatistics(numbers);
     </script>
-</body>
-
+  </body>
 </html>

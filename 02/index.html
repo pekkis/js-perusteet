@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript-perusteet 2</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <a class="back" href="../">&larr; Kaikki harjoitukset</a>
+
+    <h1>JavaScript-perusteet 2</h1>
+    <p class="sub">Forsström Mikko [AI3360]</p>
+
+    <div class="warning">
+      <span class="icon">⚠️🕰️</span>
+      <div>
+        <strong>Tarvitsee selaimen joka tukee Temporal-APIa</strong>
+        <p>
+          Tämän luvun tehtävät käyttävät <code>Temporal</code>-rajapintaa päivämäärien ja aikojen
+          käsittelyyn. Vanhaa <code>Date</code>-rajapintaa ei käytetä lainkaan. Jos selaimesi ei tue
+          Temporalia, tehtävät eivät toimi.
+        </p>
+        <p class="status" id="temporal-status">Tarkistetaan selaintukea…</p>
+      </div>
+    </div>
+
+    <p class="note">
+      Tehtävien tulostukset menevät selaimen web-konsoliin tehtävänantojen mukaisesti, joten sivut
+      näyttävät tyhjiltä. Avaa konsoli (F12 &rarr; Console) ennen sivun avaamista tai lataa sivu
+      uudelleen. Tehtävänanto on kunkin tiedoston lähdekoodissa kommenttina.
+    </p>
+
+    <ol>
+      <li>
+        <span class="num">H2T1</span><span><a href="01.html">Tehtävä 1</a></span>
+      </li>
+    </ol>
+    <script>
+      const statusElement = document.getElementById("temporal-status");
+
+      if (typeof Temporal === "undefined") {
+        statusElement.textContent = "❌ Selaimesi EI tue Temporal-APIa.";
+      } else {
+        statusElement.textContent = "✅ Selaimesi tukee Temporal-APIa.";
+      }
+    </script>
+  </body>
+</html>
