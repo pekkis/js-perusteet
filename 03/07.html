@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 3:7</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+
+    <script type="module">
+      /*
+
+            Luo Book-olioiden luomiseen tarkoitettu Book-luokka
+            class-avainsanaa käyttämälllä (ES6).
+            Book-oliolla tulisi olla seuraavat ominaisuudet:
+            name, author, publisher ja year. Luo lisäksi toString()-metodi,
+            joka palauttaa kirjan seuraavassa muodossa:
+            book: name, author, publisher, year.
+
+      Luo Library-olioiden luomiseen tarkoitettu Library-luokka
+      class-avainsanaa käyttämälllä.
+      Library-oliot pitävät sisällään Book-olioita.
+      Luo addBook()-metodi, joka lisää uuden kirjan kirjastoon.
+      Voit käyttää kirjojen tallentamiseen taulukkoa.
+      Metodin tulee näyttää A new book is added to library: bookname -viesti,
+      kun kirja lisätään kirjastoon.
+
+      Luo metodi printBooks(), joka tulostaa kirjat webselaimen konsoliin
+      seuraavassa muodossa:
+
+      Library has a following books:
+      - book: name author publisher year
+      - book: name author publisher year
+      ...
+      Library has N books
+      Esimerkkitulostus ohjelman toiminnasta
+
+      A new book is added to library: JavaScript Bible
+      A new book is added to library: Learning Python
+      A new book is added to library: Flutter in Action
+      Library has a following books:
+       - book: JavaScript Bible, Danny Goodman, John Wiley & Sons, 1998
+       - book: Learning Python, Mark Lutz, O'Reilly, 2013
+       - book: Flutter in Action, Eric Windmill, Manning Publications, 2020
+      Library has 3 books
+                  */
+
+      class Book {
+        constructor(name, author, publisher, year) {
+          this.name = name;
+          this.author = author;
+          this.publisher = publisher;
+          this.year = year;
+        }
+
+        toString() {
+          // book: name, author, publisher, year.
+          return `book: ${this.name}, ${this.author}, ${this.publisher}, ${this.year}`;
+        }
+      }
+
+      class Library {
+        constructor(books = []) {
+          this.books = books;
+        }
+
+        addBook(book) {
+          this.books.push(book);
+          console.log(`A new book is added to library: ${book.name}`);
+        }
+
+        printBooks() {
+          console.log("Library has a following books:");
+          this.books.forEach((book) => {
+            console.log(` - ${book}`);
+          });
+
+          console.log(`Library has ${this.books.length} books`);
+        }
+      }
+
+      const books = [
+        new Book("JavaScript Bible", "Danny Goodman", "John Wiley & Sons", 1998),
+        new Book("Learning Python", "Mark Lutz", "O'Reilly", 2013),
+        new Book("Flutter in Action", "Eric Windmill", "Manning Publications", 2020),
+      ];
+
+      const library = new Library();
+      books.forEach((book) => library.addBook(book));
+
+      library.printBooks();
+    </script>
+  </head>
+
+  <body>
+    Tässä tehtävässä kaikki kiinnostava on konsolissa!
+  </body>
+</html>

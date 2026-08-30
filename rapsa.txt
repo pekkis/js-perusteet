@@ -3,15 +3,15 @@ JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
 Forsström Mikko [AI3360]
 Ratkaisut: https://js-programming-jamk.pekkis.eu/
 
-Harjoitustehtäväpisteet: 41
+Harjoitustehtäväpisteet: 83
 Kaikki tarjolla olleet harjoitustehtäväpisteet: 184
-41/184 => 22,3 %
+83/184 => 45,1 %
 
 Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
 
   Harjoitukset 1   24/24p   valmis
-  Harjoitukset 2   17/32p   kesken, tehtävät 6-8 tekemättä
-  Harjoitukset 3    0/37p
+  Harjoitukset 2   32/32p   valmis
+  Harjoitukset 3   27/37p   kesken, tehtävä 9 tekemättä
   Harjoitukset 4    0/30p
   Harjoitukset 5    0/26p
   Harjoitukset 6    0/19p
@@ -97,7 +97,7 @@ H1T10: 3/3p Mäkihypyn tyylipisteet viideltä tuomarilta prompt()-funktiolla.
 
 ---
 
-JavaScript-perusteet 2 - 17/32p (kesken)
+JavaScript-perusteet 2 - 32/32p
 Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/02/
 
 Tämän luvun tehtävät käyttävät yhteistä functions.js-moduulia, jossa on
@@ -175,3 +175,104 @@ H2T5: 3/3p  Latausprosessin simulointi 0-100 %. setInterval kutsuu
             välittää pelkän lisäyksen ja saa paluuarvona nykyisen
             lukeman, jonka perusteella se lopettaa ajastimen.
             https://js-programming-jamk.pekkis.eu/02/05.html
+
+H2T6: 4/4p  Päivämäärän ja kellonajan näyttäminen sekunnin välein
+            setInterval-funktiolla.
+
+            Kolme tietoista poikkeamaa tehtävänannosta:
+            - Aika haetaan Temporal-rajapinnalla, ei Date-objektilla.
+              Sivu tarkistaa Temporal-tuen ja varoittaa, jos selain ei
+              tue sitä.
+            - Sisältö asetetaan textContent-ominaisuudella eikä
+              innerHTML:llä, jota tehtävänanto ehdottaa. innerHTML
+              tulkitsee sisällön HTML:ksi, mitä tässä ei tarvita.
+            - Elementti on DIV:n sijaan <time>, jolloin kellonaika on
+              myös koneluettavassa muodossa dateTime-attribuutissa.
+
+            Näkyvä muotoilu tehdään Intl.DateTimeFormat-rajapinnalla
+            suomalaisella lokaalilla, joten se poikkeaa tehtävän kuvan
+            englanninkielisestä esimerkistä.
+            https://js-programming-jamk.pekkis.eu/02/06.html
+
+H2T7: 5/5p  Lady Gaga -konsertti. Sivun latautuessa näytetään
+            aloitusteksti, minkä jälkeen setInterval lisää viiden
+            sekunnin välein uuden ilotulitusrivin. Rivien määrä
+            arvotaan väliltä 4-7. Kaikki aiemmat rivit jäävät näkyviin.
+            Viimeisen ilotulituksen jälkeen ajastin pysäytetään ja
+            setTimeout lisää lopputekstin viiden sekunnin kuluttua.
+            https://js-programming-jamk.pekkis.eu/02/07.html
+
+H2T8: 6/6p  Hedelmäpeli. Hedelminä on viisi Diktaattoripörssin
+            (diktaattoriporssi.com) kuvaa, jotka on skaalattu samaan
+            200x200 kokoon. Kuvien tekijä- ja lisenssitiedot ovat
+            tiedostossa diktaattorit/LAHTEET.txt.
+
+            Kierros maksaa euron, kaksi samaa tuottaa 2 euroa ja kolme
+            samaa 10 euroa. Saldo ja kierroskohtainen viesti näkyvät
+            kuvien alapuolella, ja rahojen loppuessa peli lukitaan.
+
+            Huom. tehtävänannon säännöillä pelaajan odotusarvo on
+            +0,36 euroa kierrokselta (kolme samaa 4 %:n ja pari 48 %:n
+            todennäköisyydellä viidellä symbolilla). Peli ei siis
+            käytännössä koskaan pääty rahattomuuteen sadasta eurosta
+            aloitettaessa - simuloin 20 000 peliä eikä yksikään
+            päättynyt. Loppuehto on silti toteutettu, ja sen voi testata
+            antamalla alkusaldon osoitteessa:
+            https://js-programming-jamk.pekkis.eu/02/08.html?money=1
+            https://js-programming-jamk.pekkis.eu/02/08.html
+
+---
+
+JavaScript-perusteet 3 - 27/37p (kesken)
+Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/03/
+
+H3T1: 2/2p  person-olio neljällä ominaisuudella ja arvojen tulostus
+            konsoliin.
+            https://js-programming-jamk.pekkis.eu/03/01.html
+
+H3T2: 2/2p  Edellisen tehtävän olion muokkaus: address lisätään, age
+            muutetaan, isStudent poistetaan delete-operaattorilla.
+            Ominaisuudet käydään läpi for...in-silmukalla.
+
+            Huom. en käyttäisi for...in-silmukkaa tuotantokoodissa, koska
+            se käy läpi myös prototyyppiketjun perityt ominaisuudet -
+            Object.entries() palauttaa vain olion omat. Tehtävänanto
+            kuitenkin vaatii for...in:in, ja tiedostossa on tästä
+            kommentti.
+            https://js-programming-jamk.pekkis.eu/03/02.html
+
+H3T3: 2/2p  Sisäkkäinen olio: student, jonka address on oma olionsa.
+            zipCode on merkkijonona, koska postinumero ei ole luku.
+            https://js-programming-jamk.pekkis.eu/03/03.html
+
+H3T4: 3/3p  fruits-olio ja hedelmien kokonaismäärän laskeminen.
+            Läpikäynti Object.values()- ja reduce()-yhdistelmällä.
+            https://js-programming-jamk.pekkis.eu/03/04.html
+
+H3T5: 4/4p  circle-olio, jolla on metodit getArea() ja
+            getCircumference(). Metodit palauttavat tarkan arvon ja
+            pyöristys kahteen desimaaliin tehdään vasta tulostettaessa,
+            koska pyöristys kuuluu esitykseen eikä laskentaan.
+            https://js-programming-jamk.pekkis.eu/03/05.html
+
+H3T6: 4/4p  Person-konstruktorifunktio ES5-tyyliin. addAge()-metodi on
+            Person.prototype-oliossa eikä konstruktorissa, jolloin kaikki
+            instanssit jakavat saman funktion oman kopion sijaan.
+            Tulostan oliot sellaisenaan, koska tämä tehtävä ei toisin
+            kuin luvun aiemmat anna tulosteelle muotoa.
+            https://js-programming-jamk.pekkis.eu/03/06.html
+
+H3T7: 4/4p  Book- ja Library-luokat class-määreellä. Book.toString()
+            tuottaa kirjan rivimuodon, Library.addBook() ilmoittaa
+            lisäyksestä ja printBooks() tulostaa listan ja lukumäärän.
+            https://js-programming-jamk.pekkis.eu/03/07.html
+
+H3T8: 6/6p  Vauhtilaskin-luokka, joka laskee km/h-vauhdin annetuista
+            ajasta ja matkasta. Ulkoasu erillisessä 08.css-tiedostossa.
+
+            Poikkeama: tehtävänannon calcKmhPace()-snippetti muuntaa
+            syötteet luvuiksi metodin sisällä parseInt():llä. Siirsin
+            muunnoksen lomakkeen käsittelijään, jolloin luokka ottaa
+            vastaan lukuja eikä tiedä lomakkeesta mitään. Metodin nimi ja
+            laskukaava ovat ennallaan.
+            https://js-programming-jamk.pekkis.eu/03/08.html

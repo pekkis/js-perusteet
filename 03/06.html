@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 3:6</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+
+    <script type="module">
+      /*
+
+      Luo Person-funktio, jota voidaan käyttää Person-olioiden luomiseen (ES5)
+       Person-oliolla tulee olla seuraavat ominaisuudet: name, age, phone ja email.
+       Luo addAge()-metodi, joka kasvattaa age-ominaisuuden arvoa yhdellä jokaisella
+       kutsukerralla.
+
+      Luo kolme erilaista Person-oliota
+      ja tulosta Person-olioiden arvot selaimen web-konsoliin.
+      Muista käyttää myös addAge()-metodia.
+            */
+
+      function Person(name, age, phone, email) {
+        this.name = name;
+        this.age = age;
+        this.phone = phone;
+        this.email = email;
+      }
+
+      Person.prototype.addAge = function () {
+        this.age = this.age + 1;
+      };
+
+      const gaylord = new Person(
+        "Gaylord Lohiposki",
+        60,
+        "0800-4321",
+        "gaylord.lohiposki@dr-kobros.com",
+      );
+
+      const benedictus = new Person(
+        "Benedictus Lohiposki",
+        30,
+        "0800-4322",
+        "benedict.lohiposki@dr-kobros.com",
+      );
+
+      const kirsi = new Person(
+        "Kirsi Kernell-Lohiposki",
+        31,
+        "0800-6428",
+        "kirsi.kernell-lohiposki@dr-kobros.com",
+      );
+
+      console.log("gaylord", gaylord);
+      console.log("benedictus", benedictus);
+      console.log("kirsi", kirsi);
+
+      kirsi.addAge();
+
+      console.log("an older kirsi", kirsi);
+    </script>
+  </head>
+
+  <body>
+    Tässä tehtävässä kaikki kiinnostava on konsolissa!
+  </body>
+</html>

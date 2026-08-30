@@ -3,6 +3,11 @@
   margin: 1em auto;
 }
 
+.container-wide {
+  max-width: 100ch;
+  margin: 1em auto;
+}
+
 .field {
   margin: 1em 0;
 
@@ -29,4 +34,8 @@
 
 .stack-y {
   flex-direction: column;
+}
+
+.slab {
+  border-radius: 1em;
 }

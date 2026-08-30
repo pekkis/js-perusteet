@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 3:8</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+    <link rel="stylesheet" type="text/css" href="./08.css" />
+
+    <script type="module">
+      /*
+
+Toteuta JavaScriptillä oheisen kuvan mukainen vauhtilaskin.
+Ohjelma laskee syötettyjen arvojen perusteella liikkujalle kilometriä tunnissa
+-vauhdin (km/h). Tulokset näytetään kahden desimaalin tarkkuudella.
+Lomakkeessa tulee olla syötteille sopivat oletusarvot ja niille ei
+tarvitse tehdä tarkistuksia.
+
+Toteutus tulee tehdä Vauhtilaskin-luokkana class-määreellä määriteltynä.
+ Syötetyt arvot tulee asettaa constructor-metodissa luokasta luotavan olion
+  ominaisuuksiksi. Vauhti tulee laskea annetulla calcKmhPace()-metodilla.
+  Käyttöliittymästä tulee löytyä oheisessa kuvassa nähdyt osat, mutta ulkoasu on vapaa -
+  halutessasi hyvin yksinkertainen.
+*/
+
+      class Vauhtilaskin {
+        constructor(h, min, sec, km) {
+          this.h = h;
+          this.min = min;
+          this.sec = sec;
+          this.km = km;
+        }
+
+        calcKmhPace() {
+          const tunnit = this.h + (this.min * 60 + this.sec) / 3600;
+          const tulos = this.km / tunnit;
+          return tulos.toFixed(2);
+        }
+      }
+
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const hours = parseInt(formData.get("hours"), 10);
+        const minutes = parseInt(formData.get("minutes"), 10);
+        const seconds = parseInt(formData.get("seconds"), 10);
+        const km = parseInt(formData.get("km"), 10);
+
+        const speedCalculator = new Vauhtilaskin(hours, minutes, seconds, km);
+
+        const result = speedCalculator.calcKmhPace();
+
+        const contents = [result, " km/h"];
+
+        document.querySelector("#results").replaceChildren(...contents);
+      });
+    </script>
+  </head>
+
+  <body>
+    <main class="container calculator">
+      <h1>Vauhtilaskin</h1>
+
+      <form id="form">
+        <div class="field">
+          <label for="hours">Tunnit</label>
+          <input
+            id="hours"
+            name="hours"
+            type="number"
+            step="1"
+            required
+            placeholder="1"
+            value="1"
+          />
+        </div>
+
+        <div class="field">
+          <label for="minutes">Minuutit</label>
+          <input
+            id="minutes"
+            name="minutes"
+            type="number"
+            step="1"
+            required
+            placeholder="20"
+            value="20"
+          />
+        </div>
+
+        <div class="field">
+          <label for="seconds">Sekunnit</label>
+          <input
+            id="seconds"
+            name="seconds"
+            type="number"
+            step="1"
+            required
+            placeholder="0"
+            value="0"
+          />
+        </div>
+
+        <div class="field">
+          <label for="km">Kilometrit</label>
+          <input id="km" name="km" type="number" step="1" required placeholder="0" value="10" />
+        </div>
+
+        <div class="field">
+          <button type="submit">Laske kmh-vauhti</button>
+        </div>
+      </form>
+
+      <div id="results"></div>
+    </main>
+  </body>
+</html>

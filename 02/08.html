@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 2:8</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+
+    <script type="module">
+      import { elm } from "/functions.js";
+      /*
+
+            Ohjelmoi javaScriptillä yksinkertainen hedelmäpeli-sovellus,
+            jossa jokaisella "Spin"-painikkeen klikkauksella näytetään
+            vierekkäin kolme arvottua vapaavalintaista yhtä suurta [jpg|png]-kuvaa.
+            Voit kopioida kuvia haluttuun hakemistoon sopivan määrän (vähintään 3kpl).
+            Tehtävän ratkaisu kannattaa aloittaa siitä, että ohjelma
+            tulostaa vaikkapa 3 satunnaista lukua peräkkäin/allekkain esim.
+            väliltä 1-3. Ks. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random Voit
+            muuttaa IMG-elementin src-attribuutin arvoa näyttääksesi haluamasi kuvan.
+
+      <img src="1.png" id="fruit1">
+      document.getElementById("fruit1").src = "2.png";
+      Vaatimukset:
+
+      Pelaajalla on 100 euroa pelin alkaessa
+      Jokainen kierros maksaa 1 euron
+      Kahdella samalla hedelmällä voittaa2 euroa
+      Kolmella samalla hedelmällä voittaa 10 euroa
+      Peli näyttää hedelmien alapuolella jäljellä olevien eurojen kokonaismäärän
+      Peli näyttää tiedot jokaisesta kierroksesta:
+      WOHOO - You won __ euros! tai
+      Sorry - No win!
+
+      Peli näyttää viestin Sorry you don't have any euros left! jos kaikki eurot ovat menneet ja peli ei toimi.
+
+
+            */
+
+      const images = {
+        hitler: {
+          src: "./diktaattorit/hitler.jpg",
+          alt: "Adolf Hitler",
+        },
+        mao: { alt: "Mao Zedong", src: "./diktaattorit/mao.jpg" },
+        polpot: { alt: "Pol Pot", src: "./diktaattorit/pol-pot.jpg" },
+        kim: { alt: "Kim Il Sung", src: "./diktaattorit/kim-il-sung.jpg" },
+        stalin: { alt: "Stalin", src: "./diktaattorit/stalin.jpg" },
+      };
+
+      const possibleSlabs = Object.keys(images);
+
+      // Pelaajan etu on näillä säännöillä n. +0,36 e / kierros, joten peli ei
+      // käytännössä koskaan pääty rahattomuuteen sadasta eurosta aloitettaessa.
+      // Loppuehdon voi testata antamalla alkusaldon osoitteessa: 08.html?money=1
+      const params = new URLSearchParams(location.search);
+      let money = Number(params.get("money") ?? 100);
+
+      let slabs = ["hitler", "hitler", "hitler"];
+
+      const slabsUpdater = (slabs) => {
+        slabs.forEach((slab, i) => {
+          const img = document.getElementById(`slab-${i}`);
+          img.src = images[slab].src;
+          img.alt = images[slab].alt;
+        });
+      };
+
+      const moneyUpdater = (money) => {
+        const element = document.getElementById(`money`);
+
+        const content = ["You have ", money, " euros."];
+
+        element.replaceChildren(...content);
+      };
+
+      const winUpdater = (winAmount) => {
+        const element = document.getElementById(`wins`);
+
+        const content =
+          winAmount === 0 ? ["Sorry - No win!"] : ["WOHOO - You won ", winAmount, " euros!"];
+
+        element.replaceChildren(...content);
+      };
+
+      const getVictoryAmount = (slabCount) => {
+        if (slabCount === 3) {
+          return 10;
+        }
+
+        if (slabCount === 2) {
+          return 2;
+        }
+
+        return 0;
+      };
+
+      const spin = () => {
+        money = money - 1;
+        moneyUpdater(money);
+
+        slabs[0] = possibleSlabs[Math.trunc(Math.random() * possibleSlabs.length)];
+        slabs[1] = possibleSlabs[Math.trunc(Math.random() * possibleSlabs.length)];
+        slabs[2] = possibleSlabs[Math.trunc(Math.random() * possibleSlabs.length)];
+
+        slabsUpdater(slabs);
+      };
+
+      const gameOver = () => {
+        const element = document.getElementById(`money`);
+
+        element.replaceChildren("Sorry you don't have any euros left!");
+
+        document.querySelector("#spin").disabled = true;
+      };
+
+      const spinner = document.getElementById("spin");
+      spinner.addEventListener("click", () => {
+        spin();
+
+        const largestAmountOfSameSlab = Math.max(
+          ...slabs.map((s) => slabs.filter((x) => x === s).length),
+        );
+
+        const winAmount = getVictoryAmount(largestAmountOfSameSlab);
+        money = money + winAmount;
+
+        moneyUpdater(money);
+        winUpdater(winAmount);
+
+        if (money <= 0) {
+          gameOver();
+        }
+      });
+
+      moneyUpdater(money);
+      slabsUpdater(slabs);
+    </script>
+  </head>
+
+  <body>
+    <main class="container-wide">
+      <h1>Dictator "Fruit" Game</h1>
+
+      <p>
+        Welcome to use Fruit Game. Each spin will cost 1 euros. You will will 2 euros, if you got
+        two same "fruits" and 10 euros, if each of the "fruits" are the same. Good Luck!
+      </p>
+      <p>
+        <button id="spin" type="button">Spin!</button>
+      </p>
+
+      <div class="stack stack-y stack-gap-2">
+        <div id="slabs" class="stack stack-x stack-gap-1">
+          <img id="slab-0" class="slab" />
+          <img id="slab-1" class="slab" />
+          <img id="slab-2" class="slab" />
+        </div>
+
+        <div class="stack stack-y stack-gap-1">
+          <div id="money"></div>
+          <div id="wins"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

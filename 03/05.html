@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 3:5</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+
+    <script type="module">
+      /*
+      Luo circle-olio, jonka rakenne, data ja toiminta seuraava:
+
+      radius: 5
+      color: "red"
+      Lisää oliolle metodi getArea(), joka laskee ja palauttaa ympyrän alan
+      käyttämällä kaavaa: Area = π * radius^2.
+      Lisää oliolle metodi getCircumference() joka laskee ja
+      palauttaa ympyrän piirin käyttämällä kaavaa
+       Circumference = 2 * π * radius.
+      Tulosta tiedot web-konsolille:
+
+      Circle radius is 5 and it's color is red
+      Area: 78.54
+      Circumference: 31.42
+            */
+
+      const circle = {
+        radius: 5,
+        color: "red",
+
+        getArea() {
+          return Math.PI * this.radius ** 2;
+        },
+
+        getCircumference() {
+          return 2 * Math.PI * this.radius;
+        },
+      };
+
+      console.log(`Circle radius is ${circle.radius} and it's color is ${circle.color}`);
+      console.log(`Area: ${circle.getArea().toFixed}`);
+      console.log(`Circumference: ${circle.getCircumference().toFixed(2)}`);
+    </script>
+  </head>
+
+  <body>
+    Tässä tehtävässä kaikki kiinnostava on konsolissa!
+  </body>
+</html>

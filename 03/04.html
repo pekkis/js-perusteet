@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 3:4</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+
+    <script type="module">
+      /*
+Luo fruits-olio, jonka rakenne ja data on seuraava:
+
+Apple, count 3
+Banana, count 5
+Orange, count 2
+Grape, count 1
+Käy läpi fruits-olio ja tulosta hedelemien kokonaislukumäärä web-konsolille.
+
+Fruits count is 11.
+
+      */
+
+      const fruits = {
+        Apple: { count: 3 },
+        Banana: { count: 5 },
+        Orange: { count: 2 },
+        Grape: { count: 1 },
+      };
+
+      const total = Object.values(fruits).reduce((sum, fruit) => sum + fruit.count, 0);
+
+      console.log(`Fruits count is ${total}.`);
+    </script>
+  </head>
+
+  <body>
+    Tässä tehtävässä kaikki kiinnostava on konsolissa!
+  </body>
+</html>

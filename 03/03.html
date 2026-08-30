@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 3:3</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+
+    <script type="module">
+      /*
+Olio voi sisältää toisen olion. Luo student-olio,
+jonka rakenne on seuraava:
+
+name: "Kirsi Kernell"
+age: 30
+address: an object containing:
+street: "Piippukatu 2"
+city: "Jyväskylä"
+zipCode: "40100"
+
+Tulosta ominaisuuksien arvot web-konsolille.
+
+Kirsi Kernell
+30
+Piippukatu 2
+Jyväskylä
+40100
+
+      */
+
+      const student = {
+        name: "Kirsi Kernell",
+        age: 30,
+        address: {
+          street: "Piippukatu 2",
+          city: "Jyväskylä",
+          zipCode: "40100",
+        },
+      };
+
+      console.log(student.name);
+      console.log(student.age);
+      console.log(student.address.street);
+      console.log(student.address.city);
+      console.log(student.address.zipCode);
+    </script>
+  </head>
+
+  <body>
+    Tässä tehtävässä kaikki kiinnostava on konsolissa!
+  </body>
+</html>
