@@ -3,60 +3,59 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <title>Tehtävä 2:5</title>
+    <title>Tehtävä 2:6</title>
 
     <link rel="stylesheet" type="text/css" href="./common.css" />
 
     <script type="module">
+      import { temporalGate } from "./functions.js";
       /*
 
-      Luo web-sivu, joka simuloi latausprosessia 0-100 %.
-      Käytä setInterval-funktiota kutsuaksesi itse tekemääsi funktiota.
-      Funktiosi pitäisi päivittää HTML-div-elementin sisältö niin,
-      että se näyttää uuden latausarvon joka sekunti.
+      Luo web-sivu, joka näyttää ja päivittää päivämäärän
+      ja kellonajan. Käytä setInterval-funktiota kutsuaksesi
+      itse tekemääsi funktiota. Funktiosi tulee käyttää Date-objektia
+      saadakseen tiedon nykyisestä päivämäärästä ja kellonajasta.
+      Käytä HTML:n DIV-elementin innerHTML-ominaisuutta näyttääksesi
+      uuden päivämäärän ja kellonajan joka sekunti.
 
-      Loading... __% kun lataaminen on kesken
-      * Loading finished! kun lataaminen on päättynyt
-            */
+      Toim. huom. me käytämme temporalia. Ja emme käytä innerHTMLää koska tietoturva.
 
-      const updater = (selector, percentage) => {
+      */
+
+      temporalGate();
+
+      const formatter = new Intl.DateTimeFormat("fi-FI", {
+        dateStyle: "full",
+        timeStyle: "medium",
+      });
+
+      const getNow = () => {
+        const now = Temporal.Now.zonedDateTimeISO();
+
+        const formatted = formatter.format(now.toInstant().epochMilliseconds);
+
+        const machineReadable = now.toString({ smallestUnit: "second", timeZoneName: "never" });
+
+        return { machineReadable, formatted };
+      };
+
+      const updater = (selector, getter) => {
+        const { formatted, machineReadable } = getter();
         const element = document.querySelector(selector);
-
-        const clamped = Math.min(100, Math.max(percentage, 0));
-
-        const content = clamped === 100 ? ["Loading finished!"] : ["Loading... ", clamped, "%"];
-
-        element.replaceChildren(...content);
-
-        return clamped;
+        element.dateTime = machineReadable;
+        element.textContent = formatted;
       };
 
-      const createUpdater = (selector, initialLoadingPercentage) => {
-        let loadingPercentage = initialLoadingPercentage;
-
-        updater(selector, loadingPercentage);
-
-        return (increment) => {
-          loadingPercentage = loadingPercentage + increment;
-          return updater(selector, loadingPercentage);
-        };
-      };
-
-      const updateWidget = createUpdater("#loading", 0);
-
-      const interval = setInterval(() => {
-        const increment = Math.trunc(Math.random() * 10) + 1;
-        const currentPercentage = updateWidget(increment);
-        if (currentPercentage >= 100) {
-          clearInterval(interval);
-        }
+      updater("#time", getNow);
+      setInterval(() => {
+        updater("#time", getNow);
       }, 1000);
     </script>
   </head>
 
   <body>
     <main class="container">
-      <div id="loading"></div>
+      <time datetime="" id="time"></time>
     </main>
   </body>
 </html>

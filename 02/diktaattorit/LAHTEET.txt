@@ -1,0 +1,30 @@
+Diktaattorihedelmäpelin kuvat
+
+Lähde: Diktaattoripörssi (https://www.diktaattoriporssi.com/)
+Kuvat on skaalattu 200x200 pikseliin Contentfulin kuvamuunnoksella
+(w=200&h=200&fit=fill&f=face), eli rajaus on keskitetty kasvoihin.
+
+stalin.jpg
+  Josif Stalin (Diktaattoripörssin sija 2)
+  Unidentified photographer, CC0, via Wikimedia Commons
+  Alkuperäinen: https://images.ctfassets.net/81es2xqvgkvu/67SjMEXMX9GIhezsMEvdPF/358ba1dfbe7db04e23bdf7c37c24c21b/Iosif_Stalin.jpg
+
+hitler.jpg
+  Adolf Hitler (Diktaattoripörssin sija 1)
+  Bundesarchiv, Bild 183-S33882 / CC BY-SA 3.0 DE, CC BY-SA 3.0 DE <https://creativecommons.org/licenses/by-sa/3.0/de/deed.en>, via Wikimedia Commons
+  Alkuperäinen: https://images.ctfassets.net/81es2xqvgkvu/5DQNccASLfLihZqHeTHXuf/718ad04b929380f0f444993ec79c454c/hitler.jpeg
+
+mao.jpg
+  Mao Zedong (Diktaattoripörssin sija 5)
+  неизвестный (unknown), Public domain, via Wikimedia Commons
+  Alkuperäinen: https://images.ctfassets.net/81es2xqvgkvu/2LcZ3PXEYGU6KvbJyTmr6g/bce87419719240c307226a163b57b39d/Mao_Zedong_in_1959__cropped_.jpg
+
+kim-il-sung.jpg
+  Kim Il-sung (Diktaattoripörssin sija 8)
+  Unknown Author, Public domain, via Wikimedia Commons
+  Alkuperäinen: https://images.ctfassets.net/81es2xqvgkvu/1XKjmvNaR9sybnWLxzfeIa/7ff650c2fc8dee6f4f90efa41bc375a9/Kim_Il_Sung_Portrait.png
+
+pol-pot.jpg
+  Pol Pot (Diktaattoripörssin sija 3)
+  Store norske leksikon, Public domain, via Wikimedia Commons
+  Alkuperäinen: https://images.ctfassets.net/81es2xqvgkvu/HuAZyXsuqnvtABMlrmARz/69e1cef1fe7631c8cb728806b50f0620/Pol_Pot.jpg
