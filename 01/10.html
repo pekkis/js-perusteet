@@ -22,19 +22,30 @@ Käytä JavaScriptin prompt()-funktiota tyylipisteiden kysymiseen.
       const points = [];
       for (let x = 1; x <= 5; x = x + 1) {
         const pointsFromJudge = prompt(`Tuomarin #${x} pisteet`);
-        points.push(parseInt(pointsFromJudge, 10));
+
+        const pointsNumber = parseInt(pointsFromJudge, 10);
+
+        console.log("Added points:", pointsNumber);
+
+        points.push(pointsNumber);
       }
+
+      console.log("Given points", points);
 
       const sortedPoints = [...points].sort((a, b) => a - b);
 
+      console.log("Sorted points", sortedPoints);
+
       sortedPoints.pop();
       sortedPoints.shift();
+
+      console.log("Allowed points", sortedPoints);
 
       const sum = sortedPoints.reduce((total, value) => {
         return total + value;
       }, 0);
 
-      console.log("Hyppääjän tyylipisteet", sum);
+      console.log("Sum of points is", sum);
     </script>
   </body>
 </html>

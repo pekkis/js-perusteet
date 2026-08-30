@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 2:4</title>
+
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+
+    <script type="module">
+      /*
+
+      Tee JavaScriptillä Arvaa mikä luku -sovellus.
+      Ensin sovellus arpoo luvun väliltä 1-100. Katso Math.random().
+      Sovelluksen tulee näyttää syöttökenttä, jossa käyttäjä voi yrittää arvata
+      ohjelmasi arpomaa lukua
+
+      Sovelluksen tulee näyttää vihjeitä arvauksia varten:
+
+      Jos arvottu luku on pienempi kuin arvattu luku: Luku on pienempi!
+      Jos arvottu luku on suurempi kuin arvattu luku: Luku on suurempi!.
+      Laske arvauskerrat ja kun ohjelmasi arpoma luku on arvattu, näytä alla
+      oleva viesti:
+
+      YES - you did it with __ guesses!
+
+      */
+
+      import { elm } from "./functions.js";
+
+      const theNumber = Math.trunc(Math.random() * 100) + 1;
+      let amountOfGuesses = 0;
+
+      const takeAGuess = (guessedNumber) => {
+        amountOfGuesses = amountOfGuesses + 1;
+
+        if (guessedNumber !== theNumber) {
+          const responseText =
+            guessedNumber < theNumber ? "Number is bigger!" : "Number is smaller!";
+
+          const response = elm("p")(responseText);
+          document.getElementById("results").replaceChildren(response);
+        } else {
+          const response = elm("p")("YES - you did it with ", amountOfGuesses, " guesses!");
+          document.getElementById("results").replaceChildren(response);
+
+          document
+            .getElementById("form")
+            .querySelectorAll("button, input")
+            .forEach((element) => {
+              element.disabled = true;
+            });
+        }
+      };
+
+      document.querySelector("#form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const guess = parseInt(formData.get("guess"), 10);
+
+        takeAGuess(guess);
+      });
+    </script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Guess Game</h1>
+      <p>Try to guess a number between 1 and 100.</p>
+      <form id="form" action="#">
+        <div class="field">
+          <label for="guess">Give a number</label>
+          <input id="guess" name="guess" type="number" step="1" required />
+        </div>
+
+        <div class="field">
+          <button type="submit">Guess</button>
+        </div>
+
+        <div id="results"></div>
+      </form>
+    </main>
+  </body>
+</html>

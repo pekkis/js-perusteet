@@ -1,11 +1,23 @@
 JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
-29.08.2026
+30.08.2026
 Forsström Mikko [AI3360]
 Ratkaisut: https://js-programming-jamk.pekkis.eu/
 
-Harjoitustehtäväpisteet: 24
-Kaikki tarjolla olleet harjoitustehtäväpisteet: 24
-24/24 => 100,0 %
+Harjoitustehtäväpisteet: 41
+Kaikki tarjolla olleet harjoitustehtäväpisteet: 184
+41/184 => 22,3 %
+
+Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
+
+  Harjoitukset 1   24/24p   valmis
+  Harjoitukset 2   17/32p   kesken, tehtävät 6-8 tekemättä
+  Harjoitukset 3    0/37p
+  Harjoitukset 4    0/30p
+  Harjoitukset 5    0/26p
+  Harjoitukset 6    0/19p
+  Harjoitukset 7    0/16p
+
+Kirjanpitoa päivitetään opintojakson edetessä.
 
 Ratkaisut on toteutettu erillisinä HTML-tiedostoina, jotka sisältävät
 tehtävänannon kommenttina ja ratkaisun script-lohkossa.
@@ -39,7 +51,7 @@ osa tehtäväratkaisuja.
 
 ---
 
-JavaScript-perusteet 1
+JavaScript-perusteet 1 - 24/24p
 Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/01/
 
 H1T1: 2/2p  Muuttujat ja lauseen muodostaminen template literalilla.
@@ -64,34 +76,34 @@ H1T6: 2/2p  Funktio, joka laskee taulukosta pienimmän, suurimman, summan ja
             keskiarvon.
             https://js-programming-jamk.pekkis.eu/01/06.html
 
-H1T7: 2/2p  Karkausvuoden tarkistus (jaollisuus 4:llä, poikkeuksena täydet
+H1T7: 3/3p  Karkausvuoden tarkistus (jaollisuus 4:llä, poikkeuksena täydet
             vuosisadat, poikkeuksen poikkeuksena 400:lla jaolliset).
             Testattu tehtävänannon esimerkkivuosilla 1991, 1992, 1900 ja 2000.
             https://js-programming-jamk.pekkis.eu/01/07.html
 
-H1T8: 2/2p  Palindromitarkistus. Välilyönnit poistetaan ja vertailu tehdään
+H1T8: 3/3p  Palindromitarkistus. Välilyönnit poistetaan ja vertailu tehdään
             pienaakkosin.
             https://js-programming-jamk.pekkis.eu/01/08.html
 
-H1T9: 2/2p  Nimien kysely prompt()-funktiolla kunnes syöte on tyhjä. Nimet
+H1T9: 3/3p  Nimien kysely prompt()-funktiolla kunnes syöte on tyhjä. Nimet
             tulostetaan sekä syöttöjärjestyksessä että aakkosjärjestyksessä.
             Aakkostus tehdään suomalaisella lajittelujärjestyksellä
             (localeCompare 'fi'), jolloin ä ja ö tulevat oikeaan paikkaan.
             https://js-programming-jamk.pekkis.eu/01/09.html
 
-H1T10: 2/2p Mäkihypyn tyylipisteet viideltä tuomarilta prompt()-funktiolla.
+H1T10: 3/3p Mäkihypyn tyylipisteet viideltä tuomarilta prompt()-funktiolla.
             Summasta vähennetään pienin ja suurin pistemäärä.
             https://js-programming-jamk.pekkis.eu/01/10.html
 
 ---
 
-JavaScript-perusteet 2
+JavaScript-perusteet 2 - 17/32p (kesken)
 Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/02/
 
 Tämän luvun tehtävät käyttävät yhteistä functions.js-moduulia, jossa on
 elm()-apufunktio DOM-elementtien rakentamiseen.
 
-H2T1: 2/2p  Lomake, johon syötetään nimi ja syntymävuosi. Show-painike
+H2T1: 3/3p  Lomake, johon syötetään nimi ja syntymävuosi. Show-painike
             tulostaa tehtävänannon mukaisen tekstin sivulle.
 
             Kaksi tietoista poikkeamaa tehtävänannon kuvasta:
@@ -116,7 +128,7 @@ H2T1: 2/2p  Lomake, johon syötetään nimi ja syntymävuosi. Show-painike
             päätyä suoritettavaksi HTML:ksi.
             https://js-programming-jamk.pekkis.eu/02/01.html
 
-H2T2: 2/2p  Kahden luvun yhteenlaskin. laskeSumma(a, b) ottaa vastaan
+H2T2: 3/3p  Kahden luvun yhteenlaskin. laskeSumma(a, b) ottaa vastaan
             lomakkeen kenttien merkkijonot ja palauttaa summan
             kokonaislukuna (parseInt), tulostaSumma(a, b) tulostaa
             tuloksen results-diviin. Muunnos merkkijonosta luvuksi
@@ -126,3 +138,40 @@ H2T2: 2/2p  Kahden luvun yhteenlaskin. laskeSumma(a, b) ottaa vastaan
             Labeleista puuttuvat kuvan kaksoispisteet samasta syystä
             kuin tehtävässä H2T1.
             https://js-programming-jamk.pekkis.eu/02/02.html
+
+H2T3: 4/4p  Arvonlisäverolaskin kolmella verokannalla. Kaikki laskenta
+            tapahtuu yhdessä laskeALV()-funktiossa tehtävänannon
+            vaatimuksen mukaisesti. Yleinen kanta (25,5 %) on funktion
+            oletusparametrina, ja sitä käytettäessä funktiota kutsutaan
+            yhdellä argumentilla; elintarvike- ja lääkekannat välitetään
+            toisena argumenttina.
+
+            Hinta luetaan parseFloat()-funktiolla, jotta desimaalihinnat
+            (esim. 99,90) eivät katkea kokonaisluvuiksi. Tyhjä syöte
+            torjutaan, mutta hinta 0 hyväksytään.
+            https://js-programming-jamk.pekkis.eu/02/03.html
+
+H2T4: 4/4p  Arvaa mikä luku -peli. Sovellus arpoo luvun 1-100
+            (Math.random), näyttää vihjeen "Number is bigger!" tai
+            "Number is smaller!" sen mukaan mihin suuntaan arvottu luku
+            on arvauksesta, laskee arvauskerrat ja näyttää lopuksi
+            viestin "YES - you did it with __ guesses!".
+
+            Oikean arvauksen jälkeen lomakkeen kentät ja painike
+            disabloidaan, jotta peli päättyy selvästi.
+
+            Ohjetekstissä lukee "between 1 and 100" eikä kuvan
+            "between 1 to 100" - kuvan muoto on virheellistä englantia.
+            https://js-programming-jamk.pekkis.eu/02/04.html
+
+H2T5: 3/3p  Latausprosessin simulointi 0-100 %. setInterval kutsuu
+            sekunnin välein funktiota, joka kasvattaa lukemaa
+            satunnaisella määrällä ja päivittää div-elementin sisällön.
+            Kesken ollessa "Loading... __%", sadassa prosentissa
+            "Loading finished!".
+
+            Latausprosentti on kapseloitu tehdasfunktion palauttamaan
+            sulkeumaan, joten silmukka ei käsittele tilaa itse vaan
+            välittää pelkän lisäyksen ja saa paluuarvona nykyisen
+            lukeman, jonka perusteella se lopettaa ajastimen.
+            https://js-programming-jamk.pekkis.eu/02/05.html

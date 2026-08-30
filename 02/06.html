@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 2:5</title>
+
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+
+    <script type="module">
+      /*
+
+      Luo web-sivu, joka simuloi latausprosessia 0-100 %.
+      Käytä setInterval-funktiota kutsuaksesi itse tekemääsi funktiota.
+      Funktiosi pitäisi päivittää HTML-div-elementin sisältö niin,
+      että se näyttää uuden latausarvon joka sekunti.
+
+      Loading... __% kun lataaminen on kesken
+      * Loading finished! kun lataaminen on päättynyt
+            */
+
+      const updater = (selector, percentage) => {
+        const element = document.querySelector(selector);
+
+        const clamped = Math.min(100, Math.max(percentage, 0));
+
+        const content = clamped === 100 ? ["Loading finished!"] : ["Loading... ", clamped, "%"];
+
+        element.replaceChildren(...content);
+
+        return clamped;
+      };
+
+      const createUpdater = (selector, initialLoadingPercentage) => {
+        let loadingPercentage = initialLoadingPercentage;
+
+        updater(selector, loadingPercentage);
+
+        return (increment) => {
+          loadingPercentage = loadingPercentage + increment;
+          return updater(selector, loadingPercentage);
+        };
+      };
+
+      const updateWidget = createUpdater("#loading", 0);
+
+      const interval = setInterval(() => {
+        const increment = Math.trunc(Math.random() * 10) + 1;
+        const currentPercentage = updateWidget(increment);
+        if (currentPercentage >= 100) {
+          clearInterval(interval);
+        }
+      }, 1000);
+    </script>
+  </head>
+
+  <body>
+    <main class="container">
+      <div id="loading"></div>
+    </main>
+  </body>
+</html>

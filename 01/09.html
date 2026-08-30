@@ -31,8 +31,15 @@ sekä siinä järjestyksessä kuin ne on annettu että aakkosjärjestyksessä.
         return a.localeCompare(b, "fi");
       });
 
-      console.log("Names in given order", names);
-      console.log("Alphabetically sorted names", sorted);
+      console.log("You provided the following names:");
+      names.forEach((n) => {
+        console.log("- name:", n);
+      });
+
+      console.log("Names in alphabetical order:");
+      sorted.forEach((n) => {
+        console.log("- name:", n);
+      });
     </script>
   </body>
 </html>

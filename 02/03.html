@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 2:3</title>
+
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+
+    <script type="module">
+      /*
+
+Tee JavaScript-ohjelma arvonlisäveron laskemiseksi eri arvonlisäverokannoilla
+(=prosenteilla) oheisen kuvan mukaisesti.
+Kaikki laskutoimitukset tulee tehdä yhdessä laskeALV-nimisessä
+funktiossa. laskeALV-funktio voi myös esittää tulokset painikkeiden alapuolella.
+laskeALV-funktiota kutsutaan kunkin painikkeen klikkauksen seurauksena.
+Kutsussa välitetään aina vähintään yksi parametri, joka on syötetty ALViton hinta.
+Lisäksi kutsussa välitetään toisena parametrina arvonlisäverokanta (prosenttilukema)
+silloin kun se ei ole YLEINEN (25,5%). Yleinen arvonlisäverokanta on oletusparametrina funktion esittelyssä.
+Lukuja ei tarvitse pöyristellä esim. kahden desimaalin tarkkuuteen.
+Ks.. Oletusparametrit https://netisto.fi/oppaat/js/?id=03
+      Kuva: h02t03-alv.png
+
+*/
+
+      import { elm } from "./functions.js";
+
+      const setupButton = (selector, alv) => {
+        document.querySelector(selector).addEventListener("click", () => {
+          const form = document.querySelector("form");
+          const formData = new FormData(form);
+          const price = parseFloat(formData.get("price"));
+
+          if (Number.isNaN(price)) {
+            alert("Sinun on annettava hinta!");
+            return;
+          }
+
+          if (alv === undefined) {
+            laskeALV(price);
+            return;
+          }
+
+          laskeALV(price, alv);
+        });
+      };
+
+      function laskeALV(priceWithoutVat, vatPercentage = 0.255) {
+        const vatKanta = (vatPercentage * 100).toFixed(1);
+        const vatAmount = priceWithoutVat * vatPercentage;
+        const finalPrice = priceWithoutVat + vatAmount;
+
+        const hintaRivi = elm("div")("ALViton hinta: ", priceWithoutVat.toFixed(2), " euroa");
+        const kantaRivi = elm("div")("ALVkanta: ", vatKanta, "%");
+        const alvRivi = elm("div")("ALVin määrä: ", vatAmount.toFixed(2), " euroa");
+        const yhteensaRivi = elm("div")("ALVillinen hinta: ", finalPrice.toFixed(2), " euroa");
+
+        const stack1 = elm("div", { className: "stack stack-y stack-gap-1" })(
+          kantaRivi,
+          alvRivi,
+          yhteensaRivi,
+        );
+
+        const stack2 = elm("div", { className: "stack stack-y stack-gap-2" })(hintaRivi, stack1);
+
+        document.getElementById("results").replaceChildren(stack2);
+      }
+
+      setupButton("#regular");
+      setupButton("#food", 0.14);
+      setupButton("#medicine", 0.1);
+    </script>
+  </head>
+
+  <body>
+    <main class="container">
+      <form id="form" action="#">
+        <div class="field">
+          <label for="price">Syötä ALViton hinta (EUR)</label>
+          <input id="price" name="price" type="number" required />
+        </div>
+
+        <div class="field stack stack-x">
+          <button id="regular" type="button">Laske yleinen ALV (25.5%)</button>
+          <button id="food" type="button">Laske elintarvikeALV (14%)</button>
+          <button id="medicine" type="button">Laske lääkeALV (10%)</button>
+        </div>
+
+        <div id="results"></div>
+      </form>
+    </main>
+  </body>
+</html>

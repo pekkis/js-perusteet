@@ -10,3 +10,23 @@
     display: block;
   }
 }
+
+.stack {
+  display: flex;
+}
+
+.stack-gap-1 {
+  gap: 0.5em;
+}
+
+.stack-gap-2 {
+  gap: 1em;
+}
+
+.stack-x {
+  flex-direction: row;
+}
+
+.stack-y {
+  flex-direction: column;
+}
