@@ -1,17 +1,17 @@
 JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
-30.08.2026
+02.09.2026
 Forsström Mikko [AI3360]
 Ratkaisut: https://js-programming-jamk.pekkis.eu/
 
-Harjoitustehtäväpisteet: 83
+Harjoitustehtäväpisteet: 93
 Kaikki tarjolla olleet harjoitustehtäväpisteet: 184
-83/184 => 45,1 %
+93/184 => 50,5 %
 
 Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
 
   Harjoitukset 1   24/24p   valmis
   Harjoitukset 2   32/32p   valmis
-  Harjoitukset 3   27/37p   kesken, tehtävä 9 tekemättä
+  Harjoitukset 3   37/37p   valmis
   Harjoitukset 4    0/30p
   Harjoitukset 5    0/26p
   Harjoitukset 6    0/19p
@@ -48,6 +48,10 @@ Kokonaisia tehtäväratkaisuja ei ole generoitu tekoälyllä.
 Lisäksi sivuston hakemistosivut (index.html), tyylitiedosto (style.css)
 ja tämän kirjanpidon pohja on laadittu tekoälyn avulla. Ne eivät ole
 osa tehtäväratkaisuja.
+
+Tästä on yksi poikkeus, ja se on merkitty tehtävän kohdalle: harjoituksen
+3 tehtävässä 9 osa CSS:stä on tekoälyn kirjoittamaa. Sen tehtävän
+AI-osuus on selvästi suurempi kuin yllä ilmoitettu 20 %.
 
 ---
 
@@ -223,7 +227,7 @@ H2T8: 6/6p  Hedelmäpeli. Hedelminä on viisi Diktaattoripörssin
 
 ---
 
-JavaScript-perusteet 3 - 27/37p (kesken)
+JavaScript-perusteet 3 - 37/37p
 Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/03/
 
 H3T1: 2/2p  person-olio neljällä ominaisuudella ja arvojen tulostus
@@ -276,3 +280,34 @@ H3T8: 6/6p  Vauhtilaskin-luokka, joka laskee km/h-vauhdin annetuista
             vastaan lukuja eikä tiedä lomakkeesta mitään. Metodin nimi ja
             laskukaava ovat ennallaan.
             https://js-programming-jamk.pekkis.eu/03/08.html
+
+H3T9: 10/10p Hissisimulaattori. Erilliset tyyli- ja koodikirjastot
+            (09.css, 09.js), Elevator-luokka yksityisin kentin,
+            numeronäppäimistö kerroksen valintaan, C tyhjentää ja GO
+            käynnistää siirtymän. Siirtymä kestää viisi sekuntia, jonka
+            ajan kohdetta ei voi vaihtaa. Kelvoton kerros ja liikkeen
+            aikainen GO näytetään virheviestinä, joka vanhenee itsestään.
+
+            Tietoinen poikkeama tehtävän videosta: videolla käyttäjän
+            näytölle syöttämä numero pyyhitään pois tilan vaihtuessa.
+            Tässä toteutuksessa sitä ei pyyhitä, koska näyttö on
+            käyttäjän syötepuskuri - taustatapahtuman takia hävitetty
+            syöte harmittaa käyttäjää ja pakottaa kirjoittamaan uudelleen.
+            Hissin toiminta ja kohdekerros ovat videon mukaiset; ero on
+            vain syötteen säilymisessä.
+
+            Tekoälyn käyttö on tässä tehtävässä tavallista suurempi ja
+            kohdistuu tyylitiedostoon:
+
+            - Ruudukon leveysvirheen diagnoosi ja korjaus. Painikkeiden
+              aspect-ratio ja säiliön max-width: max-content muodostivat
+              kehäpäätelmän, jonka takia sisältö valui kehyksen oikean
+              reunan yli. Korjaus oli antaa sarakkeille kiinteä leveys.
+            - Painikkeiden hover-, active- ja focus-visible-tyylit
+              (sisävarjot, siirtymä ja fokusrengas) ovat tekoälyn
+              kirjoittamia.
+
+            Olisin osannut kirjoittaa CSS:n itse, mutta olin laiska.
+            Tehtävän logiikka, Elevator-luokka ja HTML-rakenne ovat omaa
+            työtäni.
+            https://js-programming-jamk.pekkis.eu/03/09.html
