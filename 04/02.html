@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 4:2</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+
+    <script type="module">
+      /*
+      Toteuta web-sivulle JavaScript-ohjelma, joka "Tulosta tasoitukset" -painiketta
+      klikkaamalla näyttää hcpdata-nimiseen taulukkoon tallennettujen golf-pelaajien
+      tasoitukset.
+
+      Kuva: h03t03.png
+
+      Lisävaatimuksia:
+
+      1. Ohjelma toteutetaan HTML- ja JavaScript-tekniikoilla YHTEEN TIEDOSTOON.
+         Ulkoisten kirjastojen (esim. jQuery) käyttäminen ei ole sallittua.
+      2. Web-sivun ensimmäisellä latauskerralla näytetään vain painike.
+      3. Painiketta klikkaamalla ohjelma lisää ul-elementtiin li-elementit kuvan
+         mukaan. Teksti luetaan hcpdata-taulukosta. Nimen ja tasoituslukeman
+         välissä tulee olla välilyönti.
+      4. hcpdata-taulukon määrittelyä EI SAA MUUTTAA.
+      5. li-elementit tulee luoda käymällä hcpdata-taulukkoa läpi valitsemassasi
+         toistorakenteessa (for, for...of, ...).
+      6. Tulokset lisätään listaan näkyville vain kerran. Jos käyttäjä klikkaa
+         painiketta useamman kerran, tuloksia EI tule lisätä toista kertaa.
+            */
+
+      // Annettu taulukko - määrittelyä ei saa muuttaa
+      var hcpdata = [
+        { name: "Ari", hcp: 54 },
+        { name: "Pasi", hcp: 5 },
+        { name: "Seppo", hcp: 20 },
+      ];
+
+      let isDone = false;
+      document.getElementById("print").addEventListener("click", () => {
+        if (isDone) {
+          return;
+        }
+
+        isDone = true;
+
+        const elements = [];
+
+        for (const data of hcpdata) {
+          const element = document.createElement("li");
+          element.textContent = `${data.name} ${data.hcp}`;
+          elements.push(element);
+        }
+
+        document.getElementById("hcplist").replaceChildren(...elements);
+      });
+    </script>
+  </head>
+
+  <body>
+    <main class="container">
+      <button id="print">Tulosta tasoitukset</button>
+      <ul id="hcplist"></ul>
+    </main>
+  </body>
+</html>

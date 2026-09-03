@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 4:4</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+    <link rel="stylesheet" type="text/css" href="./04.css" />
+
+    <script type="module" src="./04.js"></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="field">
+        <label for="color">Valitse juhlaväri:</label>
+        <select id="color" name="color"></select>
+      </div>
+
+      <div class="field">
+        <label for="name">Mikä juhla?</label>
+        <input type="text" id="name" name="name" />
+      </div>
+
+      <div class="field">
+        <button type="button" id="apply">Vaihda valittu taustaväri</button>
+      </div>
+
+      <div class="box" id="box">
+        <div class="stack stack-y stack-gap-1">
+          <div><strong>Tulosalue</strong></div>
+          <div>Valittu: <span id="colorVal"></span></div>
+          <div id="nameVal"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 4:1</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+
+    <script type="module">
+      /*
+Toteuta JavaScriptillä oheisen kuvan mukainen ohjelma. Tekstejä hiirellä
+klikattaessa alla olevassa tilassa näkyvän kuvan paikalle vaihdetaan
+linkkitekstiä vastaava kuva. Oletuksena näytetään kuva1. Kolme linkkitekstiä
+ja niitä vastaavaa pientä kuvaa riittää.
+
+Kuva: h03t02.png
+
+Voit käyttää seuraavaa koodia aloituksessasi:
+
+<div><span>Image 1</span><span>Image 2</span>...</div>
+<img src="car1.jpg"/>
+<script>
+  // create a function which will be called from each span "onclick"
+     // change img src value to new image
+<\/script>
+      */
+
+      document.querySelectorAll("[data-car]").forEach((element) => {
+        element.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.getElementById("car").alt = element.dataset.name;
+          document.getElementById("car").src = "./" + element.dataset.car + ".jpg";
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="stack stack-y stack-gap-1">
+        <div>
+          <a data-car="almera-gti" data-name="Nissan Almera GTI" href="#">KUVA1</a> |
+          <a data-car="civic-typer" data-name="Honda Civic Type R" href="#">KUVA2</a> |
+          <a data-car="fiesta-st" data-name="Ford Fiesta ST" href="#">KUVA3</a>
+        </div>
+
+        <div>
+          <img id="car" alt="Nissan Almera GTI" src="./almera-gti.jpg" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

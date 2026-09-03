@@ -4,6 +4,7 @@
   "private": true,
   "description": "JAMK JavaScript-ohjelmointi, harjoitustehtävät",
   "license": "ISC",
+  "type": "module",
   "scripts": {
     "start": "serve .",
     "lint": "oxlint",

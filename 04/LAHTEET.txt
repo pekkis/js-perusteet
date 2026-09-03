@@ -1,0 +1,23 @@
+Tehtävän 4:1 autokuvat
+
+Lähde: Wikimedia Commons
+Kuvat on skaalattu ja rajattu 400x300 pikseliin (sips), jotta kuvan
+vaihtaminen ei siirrä sivun asettelua.
+
+fiesta-st.jpg
+  Ford Fiesta ST (Mk8, 2018)
+  Tekijä: Vauxford
+  Lisenssi: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
+  Kuvasivu: https://commons.wikimedia.org/wiki/File%3A2018_Ford_Fiesta_ST_1.5_Front.jpg
+
+civic-typer.jpg
+  Honda Civic Type R (EP3, 2001-2005)
+  Tekijä: Tokumeigakarinoaoshima
+  Lisenssi: CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+  Kuvasivu: https://commons.wikimedia.org/wiki/File%3AHonda_CIVIC_TYPE_R_%28EP3%29_front.jpg
+
+almera-gti.jpg
+  Nissan Almera GTi (N15, 1998)
+  Tekijä: Rutger van der Maar
+  Lisenssi: CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)
+  Kuvasivu: https://commons.wikimedia.org/wiki/File%3A1998_Nissan_Almera_2.0_GTi_JDM_front.jpg

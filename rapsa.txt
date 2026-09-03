@@ -1,18 +1,18 @@
 JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
-02.09.2026
+03.09.2026
 Forsström Mikko [AI3360]
 Ratkaisut: https://js-programming-jamk.pekkis.eu/
 
-Harjoitustehtäväpisteet: 93
+Harjoitustehtäväpisteet: 107
 Kaikki tarjolla olleet harjoitustehtäväpisteet: 184
-93/184 => 50,5 %
+107/184 => 58,2 %
 
 Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
 
   Harjoitukset 1   24/24p   valmis
   Harjoitukset 2   32/32p   valmis
   Harjoitukset 3   37/37p   valmis
-  Harjoitukset 4    0/30p
+  Harjoitukset 4   14/30p   kesken, tehtävät 5-7 tekemättä
   Harjoitukset 5    0/26p
   Harjoitukset 6    0/19p
   Harjoitukset 7    0/16p
@@ -311,3 +311,60 @@ H3T9: 10/10p Hissisimulaattori. Erilliset tyyli- ja koodikirjastot
             Tehtävän logiikka, Elevator-luokka ja HTML-rakenne ovat omaa
             työtäni.
             https://js-programming-jamk.pekkis.eu/03/09.html
+
+---
+
+JavaScript-perusteet 4 - 14/30p (kesken)
+Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/04/
+
+H4T1: 2/2p  Kuvan vaihto linkkiteksteillä. Linkin ja kuvan välinen kytkentä
+            on data-attribuuteissa (data-car, data-name), joten yksi
+            tapahtumakäsittelijä riittää kaikille linkeille ja uuden kuvan
+            lisääminen ei vaadi muutosta koodiin.
+
+            Kuvat ovat omia autojani: Nissan Almera GTi, Honda Civic
+            Type R (EP3) ja Ford Fiesta ST. Ne on skaalattu ja rajattu
+            samaan 400x300 kokoon, jotta kuvan vaihtaminen ei siirrä
+            sivun asettelua. Kuvien tekijä- ja lisenssitiedot ovat
+            tiedostossa LAHTEET.txt.
+            https://js-programming-jamk.pekkis.eu/04/01.html
+
+H4T2: 2/2p  Golf-tasoitusten tulostus. Toteutettu yhteen tiedostoon ilman
+            ulkoisia kirjastoja, hcpdata-taulukkoa muuttamatta ja
+            for...of-toistorakenteella tehtävänannon vaatimuksen mukaan.
+            Painikkeen useampi klikkaus ei lisää tuloksia uudelleen:
+            erillinen lippu estää toisen suorituksen, ja lisäksi
+            replaceChildren korvaa listan sisällön lisäämisen sijaan.
+            https://js-programming-jamk.pekkis.eu/04/02.html
+
+H4T3: 4/4p  SimpleToDo. Tehtävien lisäys, yksittäisen poisto klikkaamalla
+            ja koko listan tyhjennys, kaikki DOM-puuta muokkaamalla.
+
+            Klikkaus käsitellään addEventListener-metodilla, mutta
+            kuuntelija on kiinnitetty ul-elementtiin eikä yksittäisiin
+            li-elementteihin (tapahtumadelegointi). Näin sama kuuntelija
+            palvelee myös myöhemmin lisättyjä tehtäviä - listahan
+            piirretään uudelleen jokaisella muutoksella, jolloin
+            alkioihin kiinnitetyt kuuntelijat katoaisivat.
+
+            Tila on omassa signal()-apufunktiossa (functions.js), jonka
+            set() ottaa vastaan päivitysfunktion. Näin lista päivitetään
+            aina uutena taulukkona eikä paikallaan muokkaamalla.
+            https://js-programming-jamk.pekkis.eu/04/03.html
+
+H4T4: 6/6p  Värivalitsin ja juhlan nimi. Pudotusvalikon vaihtaminen
+            tulostaa värikoodin tulosalueelle muuttamatta taustaväriä;
+            tausta vaihtuu vasta painikkeesta. Nimi päivittyy
+            tulosalueelle reaaliajassa.
+
+            Värit on määritelty yhtenä taulukkona, josta valikon
+            option-elementit luodaan - näin valikon ja logiikan välillä
+            ei ole kahta erillistä listaa, jotka voisivat ajautua eri
+            tahtiin.
+
+            Numeroiden esto on toteutettu beforeinput-tapahtumalla
+            eikä keydownilla. beforeinput laukeaa ennen muutosta ja
+            kertoo mitä ollaan lisäämässä, joten sama ehto estää
+            numerot myös leikepöydältä liitettäessä ja raahattaessa -
+            keydown estäisi vain näppäinpainallukset.
+            https://js-programming-jamk.pekkis.eu/04/04.html
