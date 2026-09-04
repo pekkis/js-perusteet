@@ -68,3 +68,17 @@ export const signal = (initialValue) => {
     },
   };
 };
+
+export const fetcher = async (url) => {
+  const res = await fetch(url, {
+    method: "GET",
+  });
+
+  if (!res.ok) {
+    throw new Error("Request failed");
+  }
+
+  const json = await res.json();
+
+  return json;
+};

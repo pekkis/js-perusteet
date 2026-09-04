@@ -1,0 +1,73 @@
+/*
+Tehtävänannon kohta 4 määrittelee tyylit kiinteinä pikselimittoina
+(600x800, 570x165, 225x160). Toteutin saman näkymän flexboxilla: lista on
+pystysuora flex, yksittäinen kortti vaakasuora flex (kuva | sisältö) ja
+sisältö oma pystysuora flex.
+
+Luokka- ja id-nimet, fonttikoot ja tekstityylit ovat tehtävänannon mukaiset.
+Kortin korkeus tulee sisällöstä eikä kiinteästä 165 pikselistä, jottei pitkä
+kuvausteksti leikkaudu.
+
+Vaadittu DOM-rakenne:
+
+  div#houses
+    div.houseContainer
+      img.houseImage
+      div.houseInfo
+        p.header   osoite
+        p          koko
+        p.text     kuvaus
+        p          hinta
+*/
+
+#houses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+
+  max-width: 600px;
+  max-height: 800px;
+  overflow-y: auto;
+
+  margin: 10px 0;
+  padding-right: 0.5em;
+}
+
+.houseContainer {
+  display: flex;
+  gap: 1em;
+
+  border: 1px solid rgb(0 0 0 / 0.25);
+  border-radius: 4px;
+  padding: 0.5em;
+
+  font-size: 12px;
+}
+
+.houseImage {
+  flex: 0 0 225px;
+  width: 225px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.houseInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.houseInfo p {
+  margin: 0 0 0.35em;
+}
+
+p.header {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+p.text {
+  font-style: italic;
+  font-size: 10px;
+}

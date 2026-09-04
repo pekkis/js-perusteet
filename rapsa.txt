@@ -1,11 +1,11 @@
 JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
-04.09.2026
+05.09.2026
 Forsström Mikko [AI3360]
 Ratkaisut: https://js-programming-jamk.pekkis.eu/
 
-Harjoitustehtäväpisteet: 123
+Harjoitustehtäväpisteet: 131
 Kaikki tarjolla olleet harjoitustehtäväpisteet: 184
-123/184 => 66,8 %
+131/184 => 71,2 %
 
 Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
 
@@ -13,7 +13,7 @@ Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
   Harjoitukset 2   32/32p   valmis
   Harjoitukset 3   37/37p   valmis
   Harjoitukset 4   30/30p   valmis
-  Harjoitukset 5    0/26p
+  Harjoitukset 5    8/26p   kesken, tehtävät 3-5 tekemättä
   Harjoitukset 6    0/19p
   Harjoitukset 7    0/16p
 
@@ -428,3 +428,55 @@ H4T7: 6/6p  Animoidut pallot. Ball-luokka kapseloi paikan, nopeuden,
             tekoälyn kanssa. Ohjelman rakenne, luokkajako ja koodi ovat
             omaani.
             https://js-programming-jamk.pekkis.eu/04/07.html
+
+---
+
+JavaScript-perusteet 5 - 8/26p (kesken)
+Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/05/
+
+Tämän luvun tehtävät hakevat datansa verkosta Fetch APIlla. Käytössä on
+yhteinen fetcher()-apufunktio (functions.js), joka tarkistaa vastauksen
+tilakoodin ennen JSON-jäsennystä. Ilman tarkistusta palvelinvirhe palauttaisi
+HTML-sivun, jonka jäsennys kaatuisi harhaanjohtavaan virheeseen.
+
+H5T1: 6/6p  Kiinteistöilmoitukset. Talotiedot on muunnettu tehtävänannon
+            talotiedot.txt-tiedostosta JSON-muotoon (talot.json); alkuperäinen
+            tiedosto oli Latin-1-koodattu, joten muunnos tehtiin UTF-8:ksi.
+            Kuvat ovat kuvat-alikansiossa. getHouses() lataa JSON:n ja
+            renderHouses() muodostaa näkymän DOMia muokkaamalla.
+
+            Tehtävänanto on ristiriitainen div-elementin id:n suhteen: kohta 3
+            sanoo "talot", mutta kohdan 4 tyylit ja kohdan 7 esimerkkikoodi
+            käyttävät "houses". Valitsin "houses", koska annettu koodi ja
+            tyylit ovat siitä yhtä mieltä.
+
+            Hinta muotoillaan Intl.NumberFormatilla asetuksilla
+            currencyDisplay: "name" ja maximumFractionDigits: 0, jolloin
+            tulos on mallikuvan mukainen "700 000 euroa" ilman sentteja ja
+            ilman käsin liitettyä yksikköä.
+
+            Tyylit on toteutettu flexboxilla tehtävänannon kiinteiden
+            pikselimittojen sijaan: lista pystysuora flex, kortti vaakasuora
+            flex (kuva | sisältö), sisältö oma pystysuora flex. Luokka- ja
+            id-nimet, fonttikoot ja tekstityylit ovat tehtävänannon mukaiset,
+            mutta kortin korkeus tulee sisällöstä, jottei pitkä kuvausteksti
+            leikkaudu. Tämä vaati p-elementtien käärimisen div.houseInfo
+            -elementtiin annetun koodin litteän rakenteen sijaan.
+
+            Tyylitiedosto 01.css on kirjoitettu tekoälyn kanssa, samoin
+            talotiedon muunnos JSON-muotoon ja kuvien haku. JavaScript on
+            omaani. Tämän tehtävän AI-osuus on noin 40 %.
+            https://js-programming-jamk.pekkis.eu/05/01.html
+
+H5T2: 2/2p  Satunnainen Chuck Norris -fakta api.chucknorris.io-rajapinnasta
+            painikkeen klikkauksella.
+
+            Virheenkäsittely on jaettu kerroksittain: getJoke() kirjaa
+            teknisen virheen konsoliin ja heittää sen eteenpäin,
+            tapahtumakäsittelijä näyttää käyttäjälle viestin. Näin kerros
+            joka tietää mitä meni rikki kirjaa syyn, ja kerros joka tietää
+            kenelle puhutaan päättää mitä käyttäjä näkee.
+
+            Fakta lisätään sivulle tekstisolmuna (replaceChildren) eikä
+            innerHTML:llä.
+            https://js-programming-jamk.pekkis.eu/05/02.html
