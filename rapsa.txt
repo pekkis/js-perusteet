@@ -3,9 +3,9 @@ JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
 Forsström Mikko [AI3360]
 Ratkaisut: https://tangerine-kheer-f57338.netlify.app/
 
-Harjoitustehtäväpisteet: 158
+Harjoitustehtäväpisteet: 168
 Kaikki tarjolla olleet harjoitustehtäväpisteet: 168
-158/168 => 94,0 %
+168/168 => 100,0 %
 
 Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
 
@@ -14,12 +14,19 @@ Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
   Harjoitukset 3   37/37p   valmis
   Harjoitukset 4   30/30p   valmis
   Harjoitukset 5   26/26p   valmis
-  Harjoitukset 6    9/19p   kesken, tehtävä 3 tekemättä
+  Harjoitukset 6   19/19p   valmis
 
-Kirjanpitoa päivitetään opintojakson edetessä.
+Kaikki harjoitustehtävät on tehty.
 
 Ratkaisut on toteutettu erillisinä HTML-tiedostoina, jotka sisältävät
-tehtävänannon kommenttina ja ratkaisun script-lohkossa.
+tehtävänannon kommenttina ja ratkaisun script-lohkossa. Osassa tehtävistä
+JavaScript ja CSS ovat omissa tiedostoissaan.
+
+Lähdekoodit ovat kokonaisuudessaan julkisessa GitHub-repositoriossa:
+https://github.com/pekkis/js-perusteet
+
+Sieltä näkyy myös työn eteneminen versiohistoriana. Sivusto on julkaistu
+repositoriosta osoitteeseen https://tangerine-kheer-f57338.netlify.app/
 
 Luvun 1 tehtävissä tulostukset menevät selaimen web-konsoliin
 tehtävänantojen mukaisesti, joten sivu itsessään on tyhjä - avaa konsoli
@@ -570,7 +577,7 @@ H5T5: 10/10p Nimihaku, jossa tulokset suodattuvat kirjoittaessa ja niitä voi
 
 ---
 
-Kartat web-ohjelmoinnissa - 9/19p (kesken)
+Kartat web-ohjelmoinnissa - 19/19p
 Kaikki tämän harjoituksen ratkaisut: https://tangerine-kheer-f57338.netlify.app/06/
 
 Karttaratkaisuna on Leaflet ja OpenStreetMapin rasterilaatat. Leaflet
@@ -625,3 +632,26 @@ H6T2: 6/6p  Suosikkipaikat kartalla, lisättävissä lomakkeella ja
             OpenStreetMap enää piirrä laattoja - testasin sen. Muut paikat
             löytyvät loitontamalla.
             https://tangerine-kheer-f57338.netlify.app/06/02.html
+
+H6T3: 10/10p Suomen golfkentät kartalla, tiedot ladattuna JSON-tiedostosta.
+
+            Kenttiä on 49, ja ne ladataan tehtävänannon linkistä haetusta
+            courses.json-tiedostosta. Markkerin klikkaus avaa popupin, jossa
+            näytetään kentän nimi, osoite, puhelinnumero, verkkosivu
+            linkkinä ja sähköposti sekä esittelyteksti.
+
+            Markkerit on ryhmitelty klustereiksi leaflet.markercluster
+            -kirjastolla, joka ladataan esm.run-CDN:stä import mapin kautta.
+            Ilman klusterointia pääkaupunkiseudun kentät menevät päällekkäin
+            eikä yksittäistä kenttää voi klikata; klusteroituna ne näkyvät
+            yhtenä ryhmänä, joka avautuu zoomattaessa.
+
+            Popupin sisältö rakennetaan htl-kirjastolla DOM-solmuksi, jonka
+            Leafletin bindPopup ottaa vastaan sellaisenaan. Verkkosivulinkki
+            avautuu uuteen välilehteen ja siinä on rel="noopener".
+
+            Kartan rajaus on kiinteä ja kattaa kenttien todellisen
+            levinneisyyden (Hangosta Tahkolle, Uudestakaupungista
+            Kerimäelle). Koko Suomen rajaus veisi puolet näkymästä Lappiin,
+            jossa yhtään kenttää ei ole.
+            https://tangerine-kheer-f57338.netlify.app/06/03.html
