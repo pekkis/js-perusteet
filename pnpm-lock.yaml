@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      htl:
+        specifier: ^1.0.0
+        version: 1.0.0
       oxfmt:
         specifier: ^0.65.0
         version: 0.65.0
@@ -401,6 +404,10 @@ packages:
   has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
+
+  htl@1.0.0:
+    resolution: {integrity: sha512-dbNhlENVOgGIXNP7iYKS+p3uH7mc6CZJIubDiKpOn0eKYHdOzoZgkXI9Z4AH3gLZzFwz9/6xgPsc2fff7zXxUg==}
+    engines: {node: '>=12'}
 
   human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
@@ -864,6 +871,8 @@ snapshots:
   get-stream@6.0.1: {}
 
   has-flag@4.0.0: {}
+
+  htl@1.0.0: {}
 
   human-signals@2.1.0: {}
 

@@ -3,9 +3,9 @@ JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
 Forsström Mikko [AI3360]
 Ratkaisut: https://js-programming-jamk.pekkis.eu/
 
-Harjoitustehtäväpisteet: 131
+Harjoitustehtäväpisteet: 139
 Kaikki tarjolla olleet harjoitustehtäväpisteet: 184
-131/184 => 71,2 %
+139/184 => 75,5 %
 
 Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
 
@@ -13,7 +13,7 @@ Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
   Harjoitukset 2   32/32p   valmis
   Harjoitukset 3   37/37p   valmis
   Harjoitukset 4   30/30p   valmis
-  Harjoitukset 5    8/26p   kesken, tehtävät 3-5 tekemättä
+  Harjoitukset 5   16/26p   kesken, tehtävä 5 tekemättä
   Harjoitukset 6    0/19p
   Harjoitukset 7    0/16p
 
@@ -431,7 +431,7 @@ H4T7: 6/6p  Animoidut pallot. Ball-luokka kapseloi paikan, nopeuden,
 
 ---
 
-JavaScript-perusteet 5 - 8/26p (kesken)
+JavaScript-perusteet 5 - 16/26p (kesken)
 Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/05/
 
 Tämän luvun tehtävät hakevat datansa verkosta Fetch APIlla. Käytössä on
@@ -480,3 +480,59 @@ H5T2: 2/2p  Satunnainen Chuck Norris -fakta api.chucknorris.io-rajapinnasta
             Fakta lisätään sivulle tekstisolmuna (replaceChildren) eikä
             innerHTML:llä.
             https://js-programming-jamk.pekkis.eu/05/02.html
+
+H5T3: 2/2p  Bitcoinin arvo euroina painikkeen klikkauksella.
+
+            Tehtävänannon rajapinta ei ole enää käytettävissä: osoite
+            min-api.cryptocompare.com vastaa nykyään "401 API key required".
+            Korvasin sen Coinbasen julkisella päätepisteellä
+            https://api.coinbase.com/v2/prices/BTC-EUR/spot, joka palauttaa
+            arvon kentässä data.amount. Toiminta on sama, vain lähde eri.
+
+            Tulos näytetään muodossa "5.9.2026: 68 728,03 €". Mallikuvassa
+            hinta on muodossa "89318.41 €" eli merkkijonoliitoksena; tässä se
+            muotoillaan Intl.NumberFormatilla, jolloin tuhaterotin ja
+            desimaalipilkku noudattavat suomalaista käytäntöä.
+
+            Nykyhetki haetaan Date.now():lla eikä Temporalilla, toisin kuin
+            luvun 2 tehtävissä. Temporal ei ole vielä kaikissa selaimissa
+            (esim. testaamassani Chromiumissa se puuttui), ja tässä sitä
+            tarvittaisiin vain nykyhetken lukemiseen - ei aikavyöhyke- eikä
+            päivämäärälaskentaan, joissa Daten ongelmat alkavat.
+            https://js-programming-jamk.pekkis.eu/05/03.html
+
+H5T4: 6/6p  Fake Store -tuotteet ruudukkona, suodatettavissa kategorian
+            mukaan.
+
+            DOM rakennetaan htl-kirjastolla, joka tarjoaa tagatun
+            template-literaalin ja palauttaa oikeita DOM-solmuja:
+
+                html`<article class="product">…</article>`
+
+            Kirjasto ladataan selaimeen esm.run-CDN:stä import mapin kautta
+            (versio pinnattu: htl@1.0.0) ja on asennettu myös paikallisesti
+            devDependencyksi, jotta editori tuntee sen tyypit. Interpoloidut
+            arvot escapetetaan automaattisesti sekä tekstisisällössä että
+            attribuuteissa, joten käyttäjädata ei voi päätyä suoritettavaksi
+            HTML:ksi.
+
+            Käyttöönoton syy oli kuitenkin ergonominen: käsin kirjoitetun
+            createElement-koodin määrä oli kasvanut niin suureksi, että
+            tekijän kirosanojen määrä minuutissa ylitti sietokynnyksen.
+            Kirjasto palautti työrauhan.
+
+            Kategoriat johdetaan tuotedatasta (Set tuotteiden category-
+            kentistä) eikä erillisestä /products/categories-päätepisteestä.
+            Näin pyyntöjä on yksi, ja valikko ei voi tarjota kategoriaa jolle
+            ei ole yhtään ladattua tuotetta.
+
+            Valikko renderöidään kerran ja vain tuoteruudukko päivittyy
+            valinnan mukaan. Kokeilin ensin renderöidä myös valikon
+            uudelleen signaalista, mutta mittaus osoitti että select-elementti
+            tuhoutuu ja fokus putoaa body-elementille - näppäimistökäyttäjälle
+            se katkaisisi selauksen. Natiivi select pitää valintansa itse,
+            joten uudelleenrenderöinti ei tuonut mitään.
+
+            Hinnat muotoillaan Intl.NumberFormatilla suomalaisittain, kuten
+            tehtävässä H5T3.
+            https://js-programming-jamk.pekkis.eu/05/04.html

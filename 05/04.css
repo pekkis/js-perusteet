@@ -1,1 +1,103 @@
-/* TODO */
+/*
+Tuoteruudukon tyylit. Odotettu DOM-rakenne:
+
+  div#products.products
+    article.product
+      h3.title                  tuotteen nimi, katkaistaan yhdelle riville
+      div.body
+        img.image               tuotekuva vasemmalla
+        p.description           kuvaus oikealla, katkaistaan 7 riviin
+      div.footer
+        span.category           kategoria vasemmalla
+        span.meta               hinta ja arvosana oikealla
+
+Kortit ovat samankorkuisia rivillään, ja footer painuu kortin alalaitaan
+riippumatta siitä kuinka pitkä kuvaus on.
+*/
+
+.container {
+  max-width: none;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-block: 1em;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5em;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+
+  border: 1px solid rgb(0 0 0 / 0.15);
+  border-radius: 8px;
+  padding: 1em;
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+
+  /* yksi rivi, loppu kolmella pisteellä */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.body {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+.image {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 130px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.description {
+  margin: 0;
+  min-width: 0;
+
+  /* enintään seitsemän riviä, loppu kolmella pisteellä */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+
+  /* painaa alalaitaan, jolloin kortit ovat siistejä eri pituisilla teksteillä */
+  margin-top: auto;
+  padding-top: 0.5em;
+
+  font-weight: bold;
+}
+
+.category {
+  white-space: nowrap;
+}
+
+.meta {
+  white-space: nowrap;
+}

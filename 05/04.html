@@ -8,12 +8,19 @@
     <link rel="stylesheet" type="text/css" href="/common.css" />
     <link rel="stylesheet" type="text/css" href="./04.css" />
 
+    <script type="importmap">
+      { "imports": { "htl": "https://esm.run/htl@1.0.0" } }
+    </script>
+
     <script type="module" src="./04.js"></script>
   </head>
 
   <body>
-    <main class="container">
-      <!-- TODO -->
+    <main id="container" class="container">
+      <h1>Fake Store Products</h1>
+      <div id="header" class="toolbar"></div>
+
+      <div id="contents"></div>
     </main>
   </body>
 </html>
