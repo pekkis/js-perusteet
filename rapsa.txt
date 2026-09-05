@@ -1,11 +1,11 @@
 JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
 06.09.2026
 Forsström Mikko [AI3360]
-Ratkaisut: https://js-programming-jamk.pekkis.eu/
+Ratkaisut: https://tangerine-kheer-f57338.netlify.app/
 
-Harjoitustehtäväpisteet: 152
+Harjoitustehtäväpisteet: 158
 Kaikki tarjolla olleet harjoitustehtäväpisteet: 168
-152/168 => 90,5 %
+158/168 => 94,0 %
 
 Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
 
@@ -14,7 +14,7 @@ Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
   Harjoitukset 3   37/37p   valmis
   Harjoitukset 4   30/30p   valmis
   Harjoitukset 5   26/26p   valmis
-  Harjoitukset 6    3/19p   kesken, tehtävät 2-3 tekemättä
+  Harjoitukset 6    9/19p   kesken, tehtävä 3 tekemättä
 
 Kirjanpitoa päivitetään opintojakson edetessä.
 
@@ -55,53 +55,53 @@ AI-osuus on selvästi suurempi kuin yllä ilmoitettu 20 %.
 ---
 
 JavaScript-perusteet 1 - 24/24p
-Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/01/
+Kaikki tämän harjoituksen ratkaisut: https://tangerine-kheer-f57338.netlify.app/01/
 
 H1T1: 2/2p  Muuttujat ja lauseen muodostaminen template literalilla.
-            https://js-programming-jamk.pekkis.eu/01/01.html
+            https://tangerine-kheer-f57338.netlify.app/01/01.html
 
 H1T2: 2/2p  Kahden henkilön ikäeron laskeminen ja tulostus annetussa muodossa.
             Huom: tehtävänannon esimerkkitulosteessa nimi on "Kirsi Kernel",
             datassa "Kirsi Kernell" - käytin datan mukaista kirjoitusasua.
-            https://js-programming-jamk.pekkis.eu/01/02.html
+            https://tangerine-kheer-f57338.netlify.app/01/02.html
 
 H1T3: 2/2p  Lause taulukon sanoista toistolauseella (for) rakentaen.
-            https://js-programming-jamk.pekkis.eu/01/03.html
+            https://tangerine-kheer-f57338.netlify.app/01/03.html
 
 H1T4: 2/2p  Funktio, joka ottaa kolme lukua, tulostaa ne ja suurimman niistä.
-            https://js-programming-jamk.pekkis.eu/01/04.html
+            https://tangerine-kheer-f57338.netlify.app/01/04.html
 
 H1T5: 2/2p  Funktio, joka erottelee taulukosta parilliset ja parittomat luvut.
             Testidatassa mukana nolla ja negatiivisia lukuja.
-            https://js-programming-jamk.pekkis.eu/01/05.html
+            https://tangerine-kheer-f57338.netlify.app/01/05.html
 
 H1T6: 2/2p  Funktio, joka laskee taulukosta pienimmän, suurimman, summan ja
             keskiarvon.
-            https://js-programming-jamk.pekkis.eu/01/06.html
+            https://tangerine-kheer-f57338.netlify.app/01/06.html
 
 H1T7: 3/3p  Karkausvuoden tarkistus (jaollisuus 4:llä, poikkeuksena täydet
             vuosisadat, poikkeuksen poikkeuksena 400:lla jaolliset).
             Testattu tehtävänannon esimerkkivuosilla 1991, 1992, 1900 ja 2000.
-            https://js-programming-jamk.pekkis.eu/01/07.html
+            https://tangerine-kheer-f57338.netlify.app/01/07.html
 
 H1T8: 3/3p  Palindromitarkistus. Välilyönnit poistetaan ja vertailu tehdään
             pienaakkosin.
-            https://js-programming-jamk.pekkis.eu/01/08.html
+            https://tangerine-kheer-f57338.netlify.app/01/08.html
 
 H1T9: 3/3p  Nimien kysely prompt()-funktiolla kunnes syöte on tyhjä. Nimet
             tulostetaan sekä syöttöjärjestyksessä että aakkosjärjestyksessä.
             Aakkostus tehdään suomalaisella lajittelujärjestyksellä
             (localeCompare 'fi'), jolloin ä ja ö tulevat oikeaan paikkaan.
-            https://js-programming-jamk.pekkis.eu/01/09.html
+            https://tangerine-kheer-f57338.netlify.app/01/09.html
 
 H1T10: 3/3p Mäkihypyn tyylipisteet viideltä tuomarilta prompt()-funktiolla.
             Summasta vähennetään pienin ja suurin pistemäärä.
-            https://js-programming-jamk.pekkis.eu/01/10.html
+            https://tangerine-kheer-f57338.netlify.app/01/10.html
 
 ---
 
 JavaScript-perusteet 2 - 32/32p
-Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/02/
+Kaikki tämän harjoituksen ratkaisut: https://tangerine-kheer-f57338.netlify.app/02/
 
 Tämän luvun tehtävät käyttävät yhteistä functions.js-moduulia, jossa on
 elm()-apufunktio DOM-elementtien rakentamiseen.
@@ -129,7 +129,7 @@ H2T1: 3/3p  Lomake, johon syötetään nimi ja syntymävuosi. Show-painike
             Tuloste rakennetaan DOM-metodeilla (createElement + append)
             eikä innerHTML:llä, jolloin käyttäjän syöttämä nimi ei voi
             päätyä suoritettavaksi HTML:ksi.
-            https://js-programming-jamk.pekkis.eu/02/01.html
+            https://tangerine-kheer-f57338.netlify.app/02/01.html
 
 H2T2: 3/3p  Kahden luvun yhteenlaskin. laskeSumma(a, b) ottaa vastaan
             lomakkeen kenttien merkkijonot ja palauttaa summan
@@ -140,7 +140,7 @@ H2T2: 3/3p  Kahden luvun yhteenlaskin. laskeSumma(a, b) ottaa vastaan
 
             Labeleista puuttuvat kuvan kaksoispisteet samasta syystä
             kuin tehtävässä H2T1.
-            https://js-programming-jamk.pekkis.eu/02/02.html
+            https://tangerine-kheer-f57338.netlify.app/02/02.html
 
 H2T3: 4/4p  Arvonlisäverolaskin kolmella verokannalla. Kaikki laskenta
             tapahtuu yhdessä laskeALV()-funktiossa tehtävänannon
@@ -152,7 +152,7 @@ H2T3: 4/4p  Arvonlisäverolaskin kolmella verokannalla. Kaikki laskenta
             Hinta luetaan parseFloat()-funktiolla, jotta desimaalihinnat
             (esim. 99,90) eivät katkea kokonaisluvuiksi. Tyhjä syöte
             torjutaan, mutta hinta 0 hyväksytään.
-            https://js-programming-jamk.pekkis.eu/02/03.html
+            https://tangerine-kheer-f57338.netlify.app/02/03.html
 
 H2T4: 4/4p  Arvaa mikä luku -peli. Sovellus arpoo luvun 1-100
             (Math.random), näyttää vihjeen "Number is bigger!" tai
@@ -165,7 +165,7 @@ H2T4: 4/4p  Arvaa mikä luku -peli. Sovellus arpoo luvun 1-100
 
             Ohjetekstissä lukee "between 1 and 100" eikä kuvan
             "between 1 to 100" - kuvan muoto on virheellistä englantia.
-            https://js-programming-jamk.pekkis.eu/02/04.html
+            https://tangerine-kheer-f57338.netlify.app/02/04.html
 
 H2T5: 3/3p  Latausprosessin simulointi 0-100 %. setInterval kutsuu
             sekunnin välein funktiota, joka kasvattaa lukemaa
@@ -177,7 +177,7 @@ H2T5: 3/3p  Latausprosessin simulointi 0-100 %. setInterval kutsuu
             sulkeumaan, joten silmukka ei käsittele tilaa itse vaan
             välittää pelkän lisäyksen ja saa paluuarvona nykyisen
             lukeman, jonka perusteella se lopettaa ajastimen.
-            https://js-programming-jamk.pekkis.eu/02/05.html
+            https://tangerine-kheer-f57338.netlify.app/02/05.html
 
 H2T6: 4/4p  Päivämäärän ja kellonajan näyttäminen sekunnin välein
             setInterval-funktiolla.
@@ -195,7 +195,7 @@ H2T6: 4/4p  Päivämäärän ja kellonajan näyttäminen sekunnin välein
             Näkyvä muotoilu tehdään Intl.DateTimeFormat-rajapinnalla
             suomalaisella lokaalilla, joten se poikkeaa tehtävän kuvan
             englanninkielisestä esimerkistä.
-            https://js-programming-jamk.pekkis.eu/02/06.html
+            https://tangerine-kheer-f57338.netlify.app/02/06.html
 
 H2T7: 5/5p  Lady Gaga -konsertti. Sivun latautuessa näytetään
             aloitusteksti, minkä jälkeen setInterval lisää viiden
@@ -203,7 +203,7 @@ H2T7: 5/5p  Lady Gaga -konsertti. Sivun latautuessa näytetään
             arvotaan väliltä 4-7. Kaikki aiemmat rivit jäävät näkyviin.
             Viimeisen ilotulituksen jälkeen ajastin pysäytetään ja
             setTimeout lisää lopputekstin viiden sekunnin kuluttua.
-            https://js-programming-jamk.pekkis.eu/02/07.html
+            https://tangerine-kheer-f57338.netlify.app/02/07.html
 
 H2T8: 6/6p  Hedelmäpeli. Hedelminä on viisi Diktaattoripörssin
             (diktaattoriporssi.com) kuvaa, jotka on skaalattu samaan
@@ -221,17 +221,17 @@ H2T8: 6/6p  Hedelmäpeli. Hedelminä on viisi Diktaattoripörssin
             aloitettaessa - simuloin 20 000 peliä eikä yksikään
             päättynyt. Loppuehto on silti toteutettu, ja sen voi testata
             antamalla alkusaldon osoitteessa:
-            https://js-programming-jamk.pekkis.eu/02/08.html?money=1
-            https://js-programming-jamk.pekkis.eu/02/08.html
+            https://tangerine-kheer-f57338.netlify.app/02/08.html?money=1
+            https://tangerine-kheer-f57338.netlify.app/02/08.html
 
 ---
 
 JavaScript-perusteet 3 - 37/37p
-Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/03/
+Kaikki tämän harjoituksen ratkaisut: https://tangerine-kheer-f57338.netlify.app/03/
 
 H3T1: 2/2p  person-olio neljällä ominaisuudella ja arvojen tulostus
             konsoliin.
-            https://js-programming-jamk.pekkis.eu/03/01.html
+            https://tangerine-kheer-f57338.netlify.app/03/01.html
 
 H3T2: 2/2p  Edellisen tehtävän olion muokkaus: address lisätään, age
             muutetaan, isStudent poistetaan delete-operaattorilla.
@@ -242,33 +242,33 @@ H3T2: 2/2p  Edellisen tehtävän olion muokkaus: address lisätään, age
             Object.entries() palauttaa vain olion omat. Tehtävänanto
             kuitenkin vaatii for...in:in, ja tiedostossa on tästä
             kommentti.
-            https://js-programming-jamk.pekkis.eu/03/02.html
+            https://tangerine-kheer-f57338.netlify.app/03/02.html
 
 H3T3: 2/2p  Sisäkkäinen olio: student, jonka address on oma olionsa.
             zipCode on merkkijonona, koska postinumero ei ole luku.
-            https://js-programming-jamk.pekkis.eu/03/03.html
+            https://tangerine-kheer-f57338.netlify.app/03/03.html
 
 H3T4: 3/3p  fruits-olio ja hedelmien kokonaismäärän laskeminen.
             Läpikäynti Object.values()- ja reduce()-yhdistelmällä.
-            https://js-programming-jamk.pekkis.eu/03/04.html
+            https://tangerine-kheer-f57338.netlify.app/03/04.html
 
 H3T5: 4/4p  circle-olio, jolla on metodit getArea() ja
             getCircumference(). Metodit palauttavat tarkan arvon ja
             pyöristys kahteen desimaaliin tehdään vasta tulostettaessa,
             koska pyöristys kuuluu esitykseen eikä laskentaan.
-            https://js-programming-jamk.pekkis.eu/03/05.html
+            https://tangerine-kheer-f57338.netlify.app/03/05.html
 
 H3T6: 4/4p  Person-konstruktorifunktio ES5-tyyliin. addAge()-metodi on
             Person.prototype-oliossa eikä konstruktorissa, jolloin kaikki
             instanssit jakavat saman funktion oman kopion sijaan.
             Tulostan oliot sellaisenaan, koska tämä tehtävä ei toisin
             kuin luvun aiemmat anna tulosteelle muotoa.
-            https://js-programming-jamk.pekkis.eu/03/06.html
+            https://tangerine-kheer-f57338.netlify.app/03/06.html
 
 H3T7: 4/4p  Book- ja Library-luokat class-määreellä. Book.toString()
             tuottaa kirjan rivimuodon, Library.addBook() ilmoittaa
             lisäyksestä ja printBooks() tulostaa listan ja lukumäärän.
-            https://js-programming-jamk.pekkis.eu/03/07.html
+            https://tangerine-kheer-f57338.netlify.app/03/07.html
 
 H3T8: 6/6p  Vauhtilaskin-luokka, joka laskee km/h-vauhdin annetuista
             ajasta ja matkasta. Ulkoasu erillisessä 08.css-tiedostossa.
@@ -278,7 +278,7 @@ H3T8: 6/6p  Vauhtilaskin-luokka, joka laskee km/h-vauhdin annetuista
             muunnoksen lomakkeen käsittelijään, jolloin luokka ottaa
             vastaan lukuja eikä tiedä lomakkeesta mitään. Metodin nimi ja
             laskukaava ovat ennallaan.
-            https://js-programming-jamk.pekkis.eu/03/08.html
+            https://tangerine-kheer-f57338.netlify.app/03/08.html
 
 H3T9: 10/10p Hissisimulaattori. Erilliset tyyli- ja koodikirjastot
             (09.css, 09.js), Elevator-luokka yksityisin kentin,
@@ -309,12 +309,12 @@ H3T9: 10/10p Hissisimulaattori. Erilliset tyyli- ja koodikirjastot
             Olisin osannut kirjoittaa CSS:n itse, mutta olin laiska.
             Tehtävän logiikka, Elevator-luokka ja HTML-rakenne ovat omaa
             työtäni.
-            https://js-programming-jamk.pekkis.eu/03/09.html
+            https://tangerine-kheer-f57338.netlify.app/03/09.html
 
 ---
 
 JavaScript-perusteet 4 - 30/30p
-Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/04/
+Kaikki tämän harjoituksen ratkaisut: https://tangerine-kheer-f57338.netlify.app/04/
 
 H4T1: 2/2p  Kuvan vaihto linkkiteksteillä. Linkin ja kuvan välinen kytkentä
             on data-attribuuteissa (data-car, data-name), joten yksi
@@ -326,7 +326,7 @@ H4T1: 2/2p  Kuvan vaihto linkkiteksteillä. Linkin ja kuvan välinen kytkentä
             samaan 400x300 kokoon, jotta kuvan vaihtaminen ei siirrä
             sivun asettelua. Kuvien tekijä- ja lisenssitiedot ovat
             tiedostossa LAHTEET.txt.
-            https://js-programming-jamk.pekkis.eu/04/01.html
+            https://tangerine-kheer-f57338.netlify.app/04/01.html
 
 H4T2: 2/2p  Golf-tasoitusten tulostus. Toteutettu yhteen tiedostoon ilman
             ulkoisia kirjastoja, hcpdata-taulukkoa muuttamatta ja
@@ -334,7 +334,7 @@ H4T2: 2/2p  Golf-tasoitusten tulostus. Toteutettu yhteen tiedostoon ilman
             Painikkeen useampi klikkaus ei lisää tuloksia uudelleen:
             erillinen lippu estää toisen suorituksen, ja lisäksi
             replaceChildren korvaa listan sisällön lisäämisen sijaan.
-            https://js-programming-jamk.pekkis.eu/04/02.html
+            https://tangerine-kheer-f57338.netlify.app/04/02.html
 
 H4T3: 4/4p  SimpleToDo. Tehtävien lisäys, yksittäisen poisto klikkaamalla
             ja koko listan tyhjennys, kaikki DOM-puuta muokkaamalla.
@@ -349,7 +349,7 @@ H4T3: 4/4p  SimpleToDo. Tehtävien lisäys, yksittäisen poisto klikkaamalla
             Tila on omassa signal()-apufunktiossa (functions.js), jonka
             set() ottaa vastaan päivitysfunktion. Näin lista päivitetään
             aina uutena taulukkona eikä paikallaan muokkaamalla.
-            https://js-programming-jamk.pekkis.eu/04/03.html
+            https://tangerine-kheer-f57338.netlify.app/04/03.html
 
 H4T4: 6/6p  Värivalitsin ja juhlan nimi. Pudotusvalikon vaihtaminen
             tulostaa värikoodin tulosalueelle muuttamatta taustaväriä;
@@ -366,7 +366,7 @@ H4T4: 6/6p  Värivalitsin ja juhlan nimi. Pudotusvalikon vaihtaminen
             kertoo mitä ollaan lisäämässä, joten sama ehto estää
             numerot myös leikepöydältä liitettäessä ja raahattaessa -
             keydown estäisi vain näppäinpainallukset.
-            https://js-programming-jamk.pekkis.eu/04/04.html
+            https://tangerine-kheer-f57338.netlify.app/04/04.html
 
 H4T5: 6/6p  Ostoslista. Tuotteet (nimi, hinta, kappalemäärä) lisätään
             lomakkeella ja näytetään kortteina omassa div-elementissä.
@@ -381,7 +381,7 @@ H4T5: 6/6p  Ostoslista. Tuotteet (nimi, hinta, kappalemäärä) lisätään
             se säilyy lukuna. Kelvollisuustarkistus käyttää
             Number.isNaN():ia eikä totuusarvoa, jotta hinta 0 kelpaa
             mutta tyhjä kenttä ei.
-            https://js-programming-jamk.pekkis.eu/04/05.html
+            https://tangerine-kheer-f57338.netlify.app/04/05.html
 
 H4T6: 4/4p  Pallon siirtäminen hiirellä. Toteutettu Pointer Events
             -rajapinnalla: pointerdown ottaa osoittimen kaappauksen
@@ -396,7 +396,7 @@ H4T6: 4/4p  Pallon siirtäminen hiirellä. Toteutettu Pointer Events
             pointer capturen toimintaperiaatteen ja sen, miksi natiivi
             HTML5-raahaus kannattaa jättää kokonaan pois sen sijaan että
             se kytkettäisiin päälle ja kumottaisiin.
-            https://js-programming-jamk.pekkis.eu/04/06.html
+            https://tangerine-kheer-f57338.netlify.app/04/06.html
 
 H4T7: 6/6p  Animoidut pallot. Ball-luokka kapseloi paikan, nopeuden,
             koon ja oman elementtinsä; yksi requestAnimationFrame-silmukka
@@ -426,12 +426,12 @@ H4T7: 6/6p  Animoidut pallot. Ball-luokka kapseloi paikan, nopeuden,
             transformin ja asettelun eron sekä kimmotuksen laskennan
             tekoälyn kanssa. Ohjelman rakenne, luokkajako ja koodi ovat
             omaani.
-            https://js-programming-jamk.pekkis.eu/04/07.html
+            https://tangerine-kheer-f57338.netlify.app/04/07.html
 
 ---
 
 JavaScript-perusteet 5 - 26/26p
-Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/05/
+Kaikki tämän harjoituksen ratkaisut: https://tangerine-kheer-f57338.netlify.app/05/
 
 Tämän luvun tehtävät hakevat datansa verkosta Fetch APIlla. Käytössä on
 yhteinen fetcher()-apufunktio (functions.js), joka tarkistaa vastauksen
@@ -465,7 +465,7 @@ H5T1: 6/6p  Kiinteistöilmoitukset. Talotiedot on muunnettu tehtävänannon
             Tyylitiedosto 01.css on kirjoitettu tekoälyn kanssa, samoin
             talotiedon muunnos JSON-muotoon ja kuvien haku. JavaScript on
             omaani. Tämän tehtävän AI-osuus on noin 40 %.
-            https://js-programming-jamk.pekkis.eu/05/01.html
+            https://tangerine-kheer-f57338.netlify.app/05/01.html
 
 H5T2: 2/2p  Satunnainen Chuck Norris -fakta api.chucknorris.io-rajapinnasta
             painikkeen klikkauksella.
@@ -478,7 +478,7 @@ H5T2: 2/2p  Satunnainen Chuck Norris -fakta api.chucknorris.io-rajapinnasta
 
             Fakta lisätään sivulle tekstisolmuna (replaceChildren) eikä
             innerHTML:llä.
-            https://js-programming-jamk.pekkis.eu/05/02.html
+            https://tangerine-kheer-f57338.netlify.app/05/02.html
 
 H5T3: 2/2p  Bitcoinin arvo euroina painikkeen klikkauksella.
 
@@ -498,7 +498,7 @@ H5T3: 2/2p  Bitcoinin arvo euroina painikkeen klikkauksella.
             (esim. testaamassani Chromiumissa se puuttui), ja tässä sitä
             tarvittaisiin vain nykyhetken lukemiseen - ei aikavyöhyke- eikä
             päivämäärälaskentaan, joissa Daten ongelmat alkavat.
-            https://js-programming-jamk.pekkis.eu/05/03.html
+            https://tangerine-kheer-f57338.netlify.app/05/03.html
 
 H5T4: 6/6p  Fake Store -tuotteet ruudukkona, suodatettavissa kategorian
             mukaan.
@@ -534,7 +534,7 @@ H5T4: 6/6p  Fake Store -tuotteet ruudukkona, suodatettavissa kategorian
 
             Hinnat muotoillaan Intl.NumberFormatilla suomalaisittain, kuten
             tehtävässä H5T3.
-            https://js-programming-jamk.pekkis.eu/05/04.html
+            https://tangerine-kheer-f57338.netlify.app/05/04.html
 
 H5T5: 10/10p Nimihaku, jossa tulokset suodattuvat kirjoittaessa ja niitä voi
             selata näppäimistöllä.
@@ -566,12 +566,12 @@ H5T5: 10/10p Nimihaku, jossa tulokset suodattuvat kirjoittaessa ja niitä voi
             jälkeen, kun kolmesta tilapäivityksestä puuttui names-kenttä ja
             renderöinti kaatui ajonaikaisesti - typedef tekee siitä
             käännösaikaisen virheen, jos checkJs otetaan käyttöön.
-            https://js-programming-jamk.pekkis.eu/05/05.html
+            https://tangerine-kheer-f57338.netlify.app/05/05.html
 
 ---
 
-Kartat web-ohjelmoinnissa - 3/19p (kesken)
-Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/06/
+Kartat web-ohjelmoinnissa - 9/19p (kesken)
+Kaikki tämän harjoituksen ratkaisut: https://tangerine-kheer-f57338.netlify.app/06/
 
 Karttaratkaisuna on Leaflet ja OpenStreetMapin rasterilaatat. Leaflet
 ladataan esm.run-CDN:stä import mapin kautta (versio pinnattu 1.9.4) ja on
@@ -596,4 +596,32 @@ H6T1: 3/3p  Viisi suosikkikaupunkia Suomessa kartalla, kukin omalla
             Myyrmäki) eikä kaupungin keskipisteeseen, ja sen popupissa
             näytetään myös osoite. Koordinaatit on haettu OpenStreetMapin
             Nominatim-geokoodauspalvelusta.
-            https://js-programming-jamk.pekkis.eu/06/01.html
+            https://tangerine-kheer-f57338.netlify.app/06/01.html
+
+H6T2: 6/6p  Suosikkipaikat kartalla, lisättävissä lomakkeella ja
+            tallennettuna selaimen Local Storageen.
+
+            Paikat luetaan käynnistyksessä Local Storagesta ja kirjoitetaan
+            sinne jokaisen lisäyksen yhteydessä, joten ne säilyvät sivun
+            uudelleenlatauksen ja selaimen sulkemisen yli. Local Storage
+            tallentaa vain merkkijonoja, joten muunnos tehdään
+            JSON.stringify- ja JSON.parse-metodeilla.
+
+            Tallennettu data luetaan puolustautuvasti: jos avainta ei ole,
+            jos sisältö ei ole kelvollista JSONia, tai jos jäsennys tuottaa
+            null-arvon, palataan sisäänrakennettuun oletuslistaan. Ilman
+            viimeistä tarkistusta arvo "null" Local Storagessa tyhjentäisi
+            kartan pysyvästi ilman virheilmoitusta.
+
+            Syötteen koordinaatit tarkistetaan Number.isNaN-funktiolla ennen
+            tallennusta. Ilman sitä kelvoton syöte tallentuisi ensin ja
+            kaataisi vasta markkerin luonnin, jolloin NaN-arvot jäisivät
+            pysyvästi Local Storageen ja rikkoisivat myös seuraavat
+            lataukset.
+
+            Kartan alkurajaus on kiinteä Eurooppaan ([[46, -2], [63, 30]]),
+            koska paikkoja on myös Pohjois-Amerikassa ja Kaakkois-Aasiassa.
+            Kaikkien mahduttaminen kerralla veisi zoomin niin kauas, ettei
+            OpenStreetMap enää piirrä laattoja - testasin sen. Muut paikat
+            löytyvät loitontamalla.
+            https://tangerine-kheer-f57338.netlify.app/06/02.html
