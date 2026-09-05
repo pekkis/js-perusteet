@@ -1,11 +1,11 @@
 JavaScript-ohjelmointi: Harjoitustehtäväkirjanpito
-05.09.2026
+06.09.2026
 Forsström Mikko [AI3360]
 Ratkaisut: https://js-programming-jamk.pekkis.eu/
 
-Harjoitustehtäväpisteet: 139
-Kaikki tarjolla olleet harjoitustehtäväpisteet: 184
-139/184 => 75,5 %
+Harjoitustehtäväpisteet: 152
+Kaikki tarjolla olleet harjoitustehtäväpisteet: 168
+152/168 => 90,5 %
 
 Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
 
@@ -13,9 +13,8 @@ Tilanne harjoitussarjoittain (tavoitteena kaikki pisteet):
   Harjoitukset 2   32/32p   valmis
   Harjoitukset 3   37/37p   valmis
   Harjoitukset 4   30/30p   valmis
-  Harjoitukset 5   16/26p   kesken, tehtävä 5 tekemättä
-  Harjoitukset 6    0/19p
-  Harjoitukset 7    0/16p
+  Harjoitukset 5   26/26p   valmis
+  Harjoitukset 6    3/19p   kesken, tehtävät 2-3 tekemättä
 
 Kirjanpitoa päivitetään opintojakson edetessä.
 
@@ -431,7 +430,7 @@ H4T7: 6/6p  Animoidut pallot. Ball-luokka kapseloi paikan, nopeuden,
 
 ---
 
-JavaScript-perusteet 5 - 16/26p (kesken)
+JavaScript-perusteet 5 - 26/26p
 Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/05/
 
 Tämän luvun tehtävät hakevat datansa verkosta Fetch APIlla. Käytössä on
@@ -536,3 +535,65 @@ H5T4: 6/6p  Fake Store -tuotteet ruudukkona, suodatettavissa kategorian
             Hinnat muotoillaan Intl.NumberFormatilla suomalaisittain, kuten
             tehtävässä H5T3.
             https://js-programming-jamk.pekkis.eu/05/04.html
+
+H5T5: 10/10p Nimihaku, jossa tulokset suodattuvat kirjoittaessa ja niitä voi
+            selata näppäimistöllä.
+
+            Nimet haetaan Fetch APIlla jokaisen näppäinpainalluksen jälkeen,
+            kuten tehtävänannon kohta 2 sanoo. Yksitoista nimeä ei muutu
+            kesken kirjoittamisen, joten haku voisi tapahtua kerran - mutta
+            tehtävänanto kuvaa tässä kohdassa nimenomaan toteutustavan eikä
+            vain lopputulosta, joten noudatin sitä kirjaimellisesti.
+
+            Koko käyttöliittymän tila (hakusana, korostettu rivi ja osumat)
+            on yhdessä signaalissa yhtenä oliona. Kokeilin ensin kahta
+            erillistä signaalia, mutta se tuotti ristiriitaisen välitilan:
+            ENTER muuttaa sekä hakusanaa että korostusta, ja kahdella
+            signaalilla renderöinti ajetaan niiden välissä tilassa jossa
+            hakusana on jo uusi mutta korostus osoittaa vanhaan listaan.
+            Yhdellä oliolla päivitys on atominen.
+
+            Hakukenttä renderöidään kerran eikä koskaan uudelleen. Jos
+            elementti rakennettaisiin uudelleen tilan muuttuessa, fokus ja
+            kohdistimen paikka katoaisivat - mittasin sen. Kun tila muuttuu
+            muualta (ENTER tai ESC), kentän arvo kirjoitetaan olemassa
+            olevaan elementtiin.
+
+            Nuolinäppäimet estävät oletustoiminnon, koska ne muuttaisivat
+            muuten myös kohdistimen paikkaa hakukentässä.
+
+            Tilan muoto on dokumentoitu JSDoc-typedefinä. Se lisättiin sen
+            jälkeen, kun kolmesta tilapäivityksestä puuttui names-kenttä ja
+            renderöinti kaatui ajonaikaisesti - typedef tekee siitä
+            käännösaikaisen virheen, jos checkJs otetaan käyttöön.
+            https://js-programming-jamk.pekkis.eu/05/05.html
+
+---
+
+Kartat web-ohjelmoinnissa - 3/19p (kesken)
+Kaikki tämän harjoituksen ratkaisut: https://js-programming-jamk.pekkis.eu/06/
+
+Karttaratkaisuna on Leaflet ja OpenStreetMapin rasterilaatat. Leaflet
+ladataan esm.run-CDN:stä import mapin kautta (versio pinnattu 1.9.4) ja on
+asennettu myös paikallisesti devDependencyksi tyyppejä varten. API-avainta
+ei tarvita.
+
+Harkitsin myös MapLibre GL:ää, joka on nykyaikaisempi vektorikarttakirjasto
+ja jossa klusterointi on sisäänrakennettu. Testasin sen toimivaksi
+OpenFreeMapin ilmaisilla laatoilla, mutta valitsin Leafletin, koska
+palautuksen on toimittava kuukausia ilman valvontaa: OpenStreetMapin
+laattapalvelin on säätiön ylläpitämää infrastruktuuria, OpenFreeMap taas
+yhden ihmisen lahjoitusrahoitteinen palvelu.
+
+H6T1: 3/3p  Viisi suosikkikaupunkia Suomessa kartalla, kukin omalla
+            markkerilla ja popupilla.
+
+            Kartan rajaus lasketaan fitBounds-metodilla kaupunkien
+            koordinaateista, jolloin kaikki viisi mahtuvat näkyviin ilman
+            käsin arvattua keskipistettä ja zoomia.
+
+            Vantaan markkeri osoittaa katuosoitteeseen (Iskostie 2,
+            Myyrmäki) eikä kaupungin keskipisteeseen, ja sen popupissa
+            näytetään myös osoite. Koordinaatit on haettu OpenStreetMapin
+            Nominatim-geokoodauspalvelusta.
+            https://js-programming-jamk.pekkis.eu/06/01.html

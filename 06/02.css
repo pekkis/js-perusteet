@@ -1,0 +1,38 @@
+.container {
+  max-width: none;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(0 0 0 / 0.25);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+#form {
+  z-index: 2000;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  background-color: rgba(0 0 0 / 0.2);
+  padding: 1em;
+  border-radius: 1em;
+  corner-shape: squircle;
+  width: 30ch;
+  font-size: 14px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}

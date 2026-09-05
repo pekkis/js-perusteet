@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tehtävä 6:2</title>
+
+    <link rel="stylesheet" type="text/css" href="/common.css" />
+    <link rel="stylesheet" type="text/css" href="./02.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+
+    <script type="importmap">
+      { "imports": { "leaflet": "https://esm.run/leaflet@1.9.4" } }
+    </script>
+
+    <script type="module" src="./02.js"></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <div id="map"></div>
+      <div id="form">
+        <form id="add">
+          <h2>Add a new favourite place</h2>
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+
+          <div class="field">
+            <label for="latitude">Latitude</label>
+            <input type="number" step="any" name="latitude" id="latitude" required />
+          </div>
+
+          <div class="field">
+            <label for="longitude">Longitude</label>
+            <input type="number" step="any" name="longitude" id="longitude" required />
+          </div>
+
+          <div class="field">
+            <button type="submit">Lisää</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
